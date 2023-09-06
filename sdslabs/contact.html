@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="/style/style.css"> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+            
+     
+</head>
+<body>
+    <section class="header">
+      
+            <a href="#" > <img src="/imag/ logo.jpg" alt=""></a>
+        
+            <ul class="navibar" id="navbar">
+                <li> <span>All</span><i class="fa fa-caret-down"></i></li>
+                <li class="input"><input type="text" placeholder="search in P-COMPANY..."><i class="fa fa-search"></i></li>
+                <li><a href="/home.html" ><span>home</span><i class="fa fa-home"></i></a></li>
+                <li><a href="/shop.html"><span>shop</span><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a href="/about.html" ><span>about</span><i class="fa fa-info-circle"></i></a></li>
+                <li><a href="/contact.html" class="active"><span>contact</span><i class="fa fa-envelope"></i></a></li>
+                <li><a href="/sign.html"><span>sign</span><i class="fa fa-user"></i></a></li>
+                <li  id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
+            <i id="bar" class="fa fa-outdent"></i>
+        </div>
+    </section>
+    <section id="page-header" class="contact-header">
+        <p>Thanks for contacting us
+        </p>
+        <h2>#Let's talk </h2>
+      </section>
+
+      <section id="contact-detail" class="section">
+        <div class="detail">
+            <span>Get in touch</span>
+            <h2>visit one of our location and contact us </h2>
+            <h3>head office</h3>
+            <div>
+             <li>
+                <i class="fa fa-map"></i>
+                <p>Voluptas accusantium maxime asperiores assumen</p>
+             </li>
+             <li>
+                <i class="fa fa-envelope"></i>
+                <p>contact@some.com</p>
+             </li>
+             <li>
+                <i class="fa fa-phone"></i>
+                <p>below is number is given for calling</p>
+             </li>
+             <li>
+                <i class="fa fa-clock-o"></i>
+                <p>MON-SUT:10AM-11PM</p>
+             </li>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55361.61482197111!2d77.85362621094113!3d29.861363053908235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb36e08b35119%3A0x798f5dc25ebd0a72!2sRoorkee%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1693894030845!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+      <section id="form-detail" class="section">
+        <span>Leave a message</span>
+        <h2>we are here to hear you</h2>
+        <input type="text" placeholder="your-name">
+        <input type="text" placeholder="e-mail">
+        <input type="text" placeholder="subject">
+        <textarea name="" id="" cols="30" rows="10" placeholder="your-message"></textarea>
+        <button class="normal" id="submit-button">Submit</button>
+      </section>
+   <footer  >
+    <div class="col">
+        <img src="/imag/ logo.jpg" alt="">
+        <h4>about us</h4>
+        <p><strong>Address:</strong>jawahar bhavan IIT ROORKEE</p>
+        <p><strong>Phone:</strong>**********</p>
+        <div class="follow">
+            <h4>follow us</h4>
+            <div class="icon">
+                <a href="#" class="fa fa-facebook"> </a>   
+                <a href="#" class="fa fa-twitter"> </a>  
+                <a href="#" class="fa fa-linkedin"> </a>   
+                <a href="#" class="fa fa-instagram"> </a>  
+            </div>
+        </div>
+    </div>
+    <div class="col">
+
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms and conditions</a>
+        <a href="#">contact us</a>
+    </div>
+    <div class="col">
+
+        <h4>My account</h4>
+        <a href="#">Sign In </a>
+        <a href="#">Veiw cart</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>from app store or Google play</p>
+        <div class="row">
+           <a href="https://play.google.com/store/apps/details?id=..."><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSy3gmP37mf-Bj6Oc-rRzI-Vb1qXBckB7IQtaCvHs0y-jrBQdUq3hopCuMAcWoae7Xfc&usqp=CAU" alt=""> </a> 
+            <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="">
+        </div>
+    </div>
+   </footer>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.getElementById('submit-button');
+
+    if (submitButton) {
+        submitButton.addEventListener('click', function() {
+            // Simulate form submission
+            const isSuccessful = Math.random() < 0.5; // Simulated success or error
+
+            // Determine the result message
+            let resultMessage = '';
+            if (isSuccessful) {
+                resultMessage = 'Submission successful!';
+            } else {
+                resultMessage = 'Submission failed. Please try again.';
+            }
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(resultMessage);
+
+            // Redirect to another page with the result message in the URL
+            window.location.href = 'result.html?message=' + encodedMessage;
+        });
+    }
+});
+
+   </script>
+</body>
+</html>

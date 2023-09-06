@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"   href="/style/style.css">
+</head>
+<body>
+     <div id="signbg">
+    <div class="signup-form">
+
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="button" id="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+    <script  >
+       document.addEventListener('DOMContentLoaded', function() {
+    const signUpForm = document.getElementById('signup-form');
+    const submitButton = document.getElementById('submit-button');
+    const resultMessage = document.getElementById('result-message');
+
+    if (submitButton) {
+        submitButton.addEventListener('click', function() {
+            // Simulate form validation (replace with your actual validation logic)
+            const username = signUpForm.querySelector('#username').value;
+            const email = signUpForm.querySelector('#email').value;
+            const password = signUpForm.querySelector('#password').value;
+
+            let message = '';
+            if (username && email && password) {
+                // Success message
+                
+                message = 'Sign-up successful!';
+            } else {
+                // Error message
+                message = 'Error: Please fill in all fields.';
+            }
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Redirect to another page with the result message
+            
+            window.location.href = 'result.html?message=' + encodedMessage;
+        });
+    }
+
+    // Prevent the default form submission action
+    if (signUpForm) {
+        signUpForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Hide the result message when the user interacts with the form again
+        signUpForm.addEventListener('input', function() {
+            resultMessage.classList.add('hidden');
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

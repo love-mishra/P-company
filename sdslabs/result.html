@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+</head>
+<body>
+    <div id="result-message">
+        <!-- Result message will be displayed here -->
+    </div>
+
+    <script  >
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get the message from the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+
+    // Display the message on the result page
+    const resultMessageElement = document.getElementById('result-message');
+    resultMessageElement.textContent = decodeURIComponent(message);
+    if (message=='Sign-up successful!'){
+        window.location.href = 'home.html?';
+            }
+});
+
+    </script> 
+</body>
+</html>
