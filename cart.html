@@ -41,13 +41,11 @@
         <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
         <i id="bar" class="fa fa-outdent"></i>
     </div>
-     <!-- Dark/Light Mode Toggle -->
-<div class="dark-mode-toggle" id="themeToggle">🌞</div>
-  </header>
-   <section id="page-header" class="cart-header">
-    <p>Add to cart</p>
-    <h2>Hello, welcome</h2>
 </section>
+    <section id="page-header" class="cart-header">
+        <h2>Shopping Cart</h2>
+        <p>Your selected items</p>
+    </section>
 
     <section id="cart" class="section-p1">
         <table width="100%" id="cart-table">
@@ -175,24 +173,5 @@
     }
    }); // <-- Added missing closing brace here
    </script>
-   <script>
-   document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
-
-  if(localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = "🌙";
-  } else {
-    themeToggle.textContent = "🌞";
-  }
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-});
-
-  </script>
 </body>
 </html>

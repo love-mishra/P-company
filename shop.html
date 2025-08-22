@@ -10,6 +10,7 @@
      
 </head>
 <body>
+
   <!-- Header Section -->
 <header class="header">
     <!-- Logo -->
@@ -51,6 +52,7 @@
     </nav>
 
     <!-- Mobile Menu -->
+
     <div id="mobile">
       <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
       <i id="bar" class="fa fa-outdent"></i>
@@ -431,25 +433,45 @@
     </div>
    </footer>
 
-   <script  src="/js/source.js"></script>
-   <script>
-   document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
+   <script src="/js/source.js"></script>
+    <script>
+        // Update cart count when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
 
-  if(localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = "🌙";
-  } else {
-    themeToggle.textContent = "🌞";
-  }
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-});
-
-  </script>
+        // Add cart count display to the header
+        const cartIcon = document.querySelector('#lg-bag');
+        if (cartIcon) {
+            const cartCount = document.createElement('span');
+            cartCount.id = 'cart-count';
+            cartCount.className = 'cart-count';
+            cartCount.style.cssText = 'position: absolute; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; top: -8px; right: -8px;';
+            cartIcon.style.position = 'relative';
+            cartIcon.appendChild(cartCount);
+        }
+        
+        // Add click handlers to all cart icons
+        document.querySelectorAll('.fa-shopping-cart').forEach(function(cartIcon) {
+            const cartLink = cartIcon.closest('.ai');
+            if (cartLink) {
+                cartLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Find the closest product container and get its ID
+                    const productContainer = this.closest('.product');
+                    const productLink = productContainer.querySelector('a[href^="singleproduct.html"]');
+                    if (productLink) {
+                        const productId = new URLSearchParams(productLink.href.split('?')[1]).get('product');
+                        if (productId) {
+                            addToCart(productId);
+                            return false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

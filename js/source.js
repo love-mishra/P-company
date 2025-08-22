@@ -376,28 +376,3 @@ function performSearch() {
         window.location.href = `/shop.html?query=${encodeURIComponent(query)}`;
     }
 }
-
-
-const themeToggle = document.getElementById('themeToggle');
-
-// Load saved theme
-if(localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-mode');
-  themeToggle.textContent = "🌙";
-} else {
-  themeToggle.textContent = "🌞";
-}
-
-// Click handler to toggle theme
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-
-  if(document.body.classList.contains('dark-mode')){
-    themeToggle.textContent = "🌙"; // Show moon in dark mode
-    localStorage.setItem('theme', 'dark');
-  } else {
-    themeToggle.textContent = "🌞"; // Show sun in light mode
-    localStorage.setItem('theme', 'light');
-  }
-});
-
