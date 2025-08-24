@@ -85,154 +85,93 @@ const products = {
     '1': {
         title: 'T-shirt',
         price: 299,
+        category: 'shirts',
         image: 'https://media.istockphoto.com/id/587783998/photo/close-up-of-a-t-shirt.jpg?s=1024x1024&w=is&k=20&c=i0_NxNwqfWf5r76xhaVQ7MaQdWdKAy1y_F5Is3uwyFg='
     },
     '2': {
         title: 'Full Seleeve T-shirt',
         price: 399,
+        category: 'shirts',
         image: 'https://images.unsplash.com/photo-1618354691321-e851c56960d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1988&q=80'
     },
     '3': {
         title: 'Hoodies',
         price: 599,
+        category: 'tops',
         image: 'https://images.unsplash.com/photo-1616150840617-a0124ea42a1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80'
     },
     '4': {
         title: 'Coat for Womens',
         price: 999,
+        category: 'tops',
         image: 'https://media.istockphoto.com/id/1222396502/photo/gorgeous-young-female-in-classic-suit-black-shoes-and-grey-coat-vintage-chair-womans-clothes.jpg?s=1024x1024&w=is&k=20&c=QuLFE2xi9ZA81cjnGPF76otE_UCvxRTIrW0_O2aEwX4='
     },
     '5': {
         title: 'Black T-shirt',
         price: 349,
+        category: 'shirts',
         image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60'
     },
     '6': {
         title: 'Frock for Girls',
         price: 699,
+        category: 'lower',
         image: 'https://media.istockphoto.com/id/1406303920/photo/womens-sweatpants-sport.jpg?s=612x612&w=0&k=20&c=TxvH1nr7-w_ZtF8hymcDlR_iykcHJtn-enqUx1Kv9a8='
     },
     '7': {
         title: 'Tops for Girls',
         price: 449,
+        category: 'tops',
         image: 'https://www.fablestreet.com/cdn/shop/products/cotton_round_neck_knitted_fit_and_flare_dress_l1_0c2f9892-9a92-4673-9021-c7cbc0a948e6_1300x.jpg?v=1613100761'
     },
     '8': {
         title: 'Tops for Girls',
         price: 449,
+        category: 'tops',
         image: 'https://www.fablestreet.com/cdn/shop/products/v_neck_floral_fit_and_flare_dress_l1_1300x.jpg?v=1690290104'
     },
     '9': {
         title: 'Frocks',
         price: 799,
+        category: 'lower',
         image: 'https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/2/tr:w-960,/12e1034TWDR705.jpg?rnd=20200526195200'
     },
     '10': {
         title: 'Frocks for Kids',
         price: 499,
+        category: 'lower',
         image: 'https://m.media-amazon.com/images/I/718J1laiICL._AC_UY1100_.jpg'
     },
     '11': {
         title: 'Womens Top',
         price: 399,
+        category: 'tops',
         image: 'https://img3.junaroad.com/uiproducts/19670369/zoom_0-1681130955.jpg'
     },
     '12': {
         title: 'T-shirts',
         price: 299,
+        category: 'shirts',
         image: 'https://img3.junaroad.com/uiproducts/20165393/zoom_0-1691736139.jpg'
     },
     '13': {
         title: 'Cotton T-shirts',
         price: 349,
+        category: 'shirts',
         image: 'https://img3.junaroad.com/uiproducts/19514453/zoom_0-1678805803.jpg'
     },
     '14': {
         title: 'Trousers',
         price: 599,
+        category: 'pants',
         image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80'
     },
     '15': {
         title: 'Cut T-shirts',
         price: 249,
+        category: 'shirts',
         image: 'https://media.istockphoto.com/id/173867932/photo/red-football-shirt.jpg?s=1024x1024&w=is&k=20&c=qggoJiI6Ldj6WkBn744yjaYSqfl82d1-9ZnBARKXFGc='
-    },
-    '16': {
-        title: 'White Hoodie',
-        price: 1499,
-        image: 'https://images.pexels.com/photos/8217415/pexels-photo-8217415.jpeg?_gl=1*s62gf1*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTIzMzEkajU5JGwwJGgw',
-    },
-    '17': {
-        title: 'Sport Shoes',
-        price: 2499,
-        image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?_gl=1*3b804l*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTI2ODgkajU2JGwwJGgw',
-    },
-    '18': {
-        title: 'Kurta',
-        price: 999,
-        image: 'https://thumbs.dreamstime.com/b/colorful-indian-kurta-isolated-white-background-perfect-fashion-ethnic-wear-cultural-content-colorful-indian-kurta-364238177.jpg',
-    },
-    '19': {
-        title: 'Kids Shirt',
-        price: 349,
-        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '20': {
-        title: 'Plain T-Shirt',
-        price: 199,
-        image: 'https://media.istockphoto.com/id/1218948901/photo/black-t-shirt-mock-up-on-wooden-hanger-rear-side-view.jpg?s=1024x1024&w=is&k=20&c=7w1NVUo15ytsI19yl4FTszPfVZlaL2CAVJqfcqFKM0U=',
-    },
-    '21': {
-        title: 'Jeans',
-        price: 1299,
-        image: 'https://images.unsplash.com/photo-1718252540511-e958742e4165?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '22': {
-        title: 'Printed T-Shirts',
-        price: 449,
-        image: 'https://images.unsplash.com/photo-1628071645679-101ea5fad26f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '23': {
-        title: 'Sneakers',
-        price: 599,
-        image: 'https://images.pexels.com/photos/1280064/pexels-photo-1280064.jpeg?_gl=1*1rtl0px*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTgwMjkkajMzJGwwJGgw',
-    },
-    '24': {
-        title: 'High Heels',
-        price: 1199,
-        image: 'https://cdn.pixabay.com/photo/2020/02/21/09/07/sandals-4866934_1280.jpg',
-    },
-    '25': {
-        title: 'Formal Shirts',
-        price:849,
-        image: 'https://images.unsplash.com/photo-1602810319250-a663f0af2f75?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '26': {
-        title: 'Anime Printed T-Shirts',
-        price: 699,
-        image: 'https://images.unsplash.com/photo-1627913363993-95b23378265e?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '27': {
-        title: 'Casual T-Shirts',
-        price: 399,
-        image: 'https://plus.unsplash.com/premium_photo-1755534537506-5528462e4e1f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    '28': {
-        title: 'Casual T-shirt',
-        price: 249,
-        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        
-    },
-    '29': {
-        title: 'Jeans',
-        price: 749,
-        image: 'https://images.unsplash.com/photo-1721637222188-fa7bf56ceaf5?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',   
-    },
-    '30': {
-        title: 'Anime Printed Hoodie',
-        price: 949,
-        image: 'https://images.unsplash.com/photo-1659082056845-3b839c7551bf?q=80&w=369&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
+    }
 };
 
 function addToCart(productId) {
@@ -300,8 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
+// Cart Functionality
 
 // Cart functionality
 function addToCart(productId) {
@@ -454,3 +392,194 @@ function performSearch() {
     }
 }
 
+// Filter functionality
+function filterProducts(category) {
+    console.log('Filter called with category:', category);
+    
+    const productContainer = document.getElementById('product1');
+    if (!productContainer) {
+        console.log('Product container not found');
+        return;
+    }
+    
+    const productDivs = productContainer.querySelectorAll('.product');
+    console.log('Found products:', productDivs.length);
+    
+    let visibleCount = 0;
+    
+    productDivs.forEach((productDiv, index) => {
+        const productId = productDiv.getAttribute('data-product-id') || (index + 1).toString();
+        const product = products[productId];
+        
+        if (!product) {
+            console.log('Product not found for ID:', productId);
+            // Set data-product-id if missing
+            productDiv.setAttribute('data-product-id', productId);
+            return;
+        }
+        
+        let shouldShow = false;
+        
+        if (category === 'all') {
+            shouldShow = true;
+        } else {
+            // Match category or check if product title contains the keyword
+            const productCategory = product.category ? product.category.toLowerCase() : '';
+            const productTitle = product.title ? product.title.toLowerCase() : '';
+            const categoryLower = category.toLowerCase();
+            
+            console.log(`Product ${productId}: "${product.title}" - Category: "${productCategory}"`);
+            
+            // Check direct category match first
+            if (productCategory === categoryLower) {
+                shouldShow = true;
+            }
+            // Then check title contains keyword
+            else if (productTitle.includes(categoryLower)) {
+                shouldShow = true;
+            }
+            // Special keyword matching for better UX
+            else if (categoryLower === 'shirts' && (productTitle.includes('t-shirt') || productTitle.includes('shirt'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'tops' && (productTitle.includes('top') || productTitle.includes('hoodie') || productTitle.includes('coat'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'lower' && (productTitle.includes('frock') || productTitle.includes('dress'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'pants' && (productTitle.includes('trouser') || productTitle.includes('pant'))) {
+                shouldShow = true;
+            }
+        }
+        
+        if (shouldShow) {
+            productDiv.style.display = 'block';
+            productDiv.style.animation = 'fadeIn 0.5s ease';
+            visibleCount++;
+            console.log(`Showing product: ${product.title}`);
+        } else {
+            productDiv.style.display = 'none';
+            console.log(`Hiding product: ${product.title}`);
+        }
+    });
+    
+    // Show feedback to user
+    console.log(`Filtering by "${category}": ${visibleCount} products shown`);
+    
+    // Close the dropdown after selection
+    const details = document.querySelector('details');
+    if (details) {
+        details.removeAttribute('open');
+    }
+    
+    // Show a temporary message to user
+    showFilterMessage(category, visibleCount);
+}
+
+// Show filter feedback message
+function showFilterMessage(category, count) {
+    // Remove existing message
+    const existingMessage = document.querySelector('.filter-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message
+    const message = document.createElement('div');
+    message.className = 'filter-message';
+    message.style.cssText = `
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: linear-gradient(45deg, #4a6b4a, #5a7b5a);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        z-index: 1000;
+        font-size: 14px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        animation: slideIn 0.3s ease;
+    `;
+    
+    if (category === 'all') {
+        message.textContent = `Showing all ${count} products`;
+    } else {
+        message.textContent = `Showing ${count} ${category} products`;
+    }
+    
+    document.body.appendChild(message);
+    
+    // Remove message after 3 seconds
+    setTimeout(() => {
+        if (message.parentNode) {
+            message.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => message.remove(), 300);
+        }
+    }, 3000);
+}
+
+// Global filter function for use in HTML onclick attributes
+window.filterProducts = filterProducts;
+
+// Initialize filter functionality when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Add data-product-id attributes to products if missing
+    const productDivs = document.querySelectorAll('#product1 .product');
+    console.log('Found', productDivs.length, 'products');
+    
+    productDivs.forEach((productDiv, index) => {
+        const productId = (index + 1).toString();
+        
+        // Always set the data-product-id to ensure consistency
+        productDiv.setAttribute('data-product-id', productId);
+        
+        // Also update the cart icon link
+        const cartIcon = productDiv.querySelector('.ai');
+        if (cartIcon) {
+            cartIcon.setAttribute('data-product-id', productId);
+        }
+        
+        console.log(`Product ${productId}:`, products[productId]);
+    });
+    
+    // Add click event listeners to dropdown items
+    const dropdownItems = document.querySelectorAll('details > div > p');
+    dropdownItems.forEach(item => {
+        // Remove existing onclick to avoid conflicts
+        item.removeAttribute('onclick');
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.textContent.toLowerCase().trim();
+            console.log('Filter clicked:', category);
+            filterProducts(category);
+        });
+    });
+    
+    // Add fadeIn animation CSS if not already present
+    if (!document.querySelector('#filter-animation-styles')) {
+        const style = document.createElement('style');
+        style.id = 'filter-animation-styles';
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .filter-message {
+                animation: slideIn 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    // Update cart count on page load
+    updateCartCount();
+    
+    // Display cart if on cart page
+    if (document.getElementById('cart-items')) {
+        displayCart();
+    }
+    
+    // Test filter on page load (remove this after testing)
+    console.log('Products loaded:', Object.keys(products).length);
+});
