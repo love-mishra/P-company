@@ -394,56 +394,164 @@ function performSearch() {
 
 // Filter functionality
 function filterProducts(category) {
+    console.log('Filter called with category:', category);
+    
     const productContainer = document.getElementById('product1');
-    if (!productContainer) return; // Exit if not on shop page
+    if (!productContainer) {
+        console.log('Product container not found');
+        return;
+    }
     
     const productDivs = productContainer.querySelectorAll('.product');
+    console.log('Found products:', productDivs.length);
     
-    productDivs.forEach(productDiv => {
-        const productId = productDiv.getAttribute('data-product-id');
+    let visibleCount = 0;
+    
+    productDivs.forEach((productDiv, index) => {
+        const productId = productDiv.getAttribute('data-product-id') || (index + 1).toString();
         const product = products[productId];
         
-        if (!product) return;
+        if (!product) {
+            console.log('Product not found for ID:', productId);
+            // Set data-product-id if missing
+            productDiv.setAttribute('data-product-id', productId);
+            return;
+        }
         
-        if (category === 'all' || product.category === category.toLowerCase()) {
+        let shouldShow = false;
+        
+        if (category === 'all') {
+            shouldShow = true;
+        } else {
+            // Match category or check if product title contains the keyword
+            const productCategory = product.category ? product.category.toLowerCase() : '';
+            const productTitle = product.title ? product.title.toLowerCase() : '';
+            const categoryLower = category.toLowerCase();
+            
+            console.log(`Product ${productId}: "${product.title}" - Category: "${productCategory}"`);
+            
+            // Check direct category match first
+            if (productCategory === categoryLower) {
+                shouldShow = true;
+            }
+            // Then check title contains keyword
+            else if (productTitle.includes(categoryLower)) {
+                shouldShow = true;
+            }
+            // Special keyword matching for better UX
+            else if (categoryLower === 'shirts' && (productTitle.includes('t-shirt') || productTitle.includes('shirt'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'tops' && (productTitle.includes('top') || productTitle.includes('hoodie') || productTitle.includes('coat'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'lower' && (productTitle.includes('frock') || productTitle.includes('dress'))) {
+                shouldShow = true;
+            }
+            else if (categoryLower === 'pants' && (productTitle.includes('trouser') || productTitle.includes('pant'))) {
+                shouldShow = true;
+            }
+        }
+        
+        if (shouldShow) {
             productDiv.style.display = 'block';
             productDiv.style.animation = 'fadeIn 0.5s ease';
+            visibleCount++;
+            console.log(`Showing product: ${product.title}`);
         } else {
             productDiv.style.display = 'none';
+            console.log(`Hiding product: ${product.title}`);
         }
     });
+    
+    // Show feedback to user
+    console.log(`Filtering by "${category}": ${visibleCount} products shown`);
     
     // Close the dropdown after selection
     const details = document.querySelector('details');
     if (details) {
         details.removeAttribute('open');
     }
+    
+    // Show a temporary message to user
+    showFilterMessage(category, visibleCount);
 }
+
+// Show filter feedback message
+function showFilterMessage(category, count) {
+    // Remove existing message
+    const existingMessage = document.querySelector('.filter-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message
+    const message = document.createElement('div');
+    message.className = 'filter-message';
+    message.style.cssText = `
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: linear-gradient(45deg, #4a6b4a, #5a7b5a);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        z-index: 1000;
+        font-size: 14px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        animation: slideIn 0.3s ease;
+    `;
+    
+    if (category === 'all') {
+        message.textContent = `Showing all ${count} products`;
+    } else {
+        message.textContent = `Showing ${count} ${category} products`;
+    }
+    
+    document.body.appendChild(message);
+    
+    // Remove message after 3 seconds
+    setTimeout(() => {
+        if (message.parentNode) {
+            message.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => message.remove(), 300);
+        }
+    }, 3000);
+}
+
+// Global filter function for use in HTML onclick attributes
+window.filterProducts = filterProducts;
 
 // Initialize filter functionality when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Add data-product-id attributes to products if missing
     const productDivs = document.querySelectorAll('#product1 .product');
+    console.log('Found', productDivs.length, 'products');
+    
     productDivs.forEach((productDiv, index) => {
-        if (!productDiv.getAttribute('data-product-id')) {
-            const productId = (index + 1).toString();
-            productDiv.setAttribute('data-product-id', productId);
-            
-            // Also update the cart icon link
-            const cartIcon = productDiv.querySelector('.ai');
-            if (cartIcon && !cartIcon.getAttribute('data-product-id')) {
-                cartIcon.setAttribute('data-product-id', productId);
-            }
+        const productId = (index + 1).toString();
+        
+        // Always set the data-product-id to ensure consistency
+        productDiv.setAttribute('data-product-id', productId);
+        
+        // Also update the cart icon link
+        const cartIcon = productDiv.querySelector('.ai');
+        if (cartIcon) {
+            cartIcon.setAttribute('data-product-id', productId);
         }
+        
+        console.log(`Product ${productId}:`, products[productId]);
     });
     
-    // Add click event listeners to dropdown items (removing previous listeners to avoid duplicates)
+    // Add click event listeners to dropdown items
     const dropdownItems = document.querySelectorAll('details > div > p');
     dropdownItems.forEach(item => {
         // Remove existing onclick to avoid conflicts
         item.removeAttribute('onclick');
-        item.addEventListener('click', function() {
-            const category = this.textContent.toLowerCase();
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.textContent.toLowerCase().trim();
+            console.log('Filter clicked:', category);
             filterProducts(category);
         });
     });
@@ -457,6 +565,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 from { opacity: 0; transform: translateY(20px); }
                 to { opacity: 1; transform: translateY(0); }
             }
+            .filter-message {
+                animation: slideIn 0.3s ease;
+            }
         `;
         document.head.appendChild(style);
     }
@@ -468,4 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('cart-items')) {
         displayCart();
     }
+    
+    // Test filter on page load (remove this after testing)
+    console.log('Products loaded:', Object.keys(products).length);
 });
