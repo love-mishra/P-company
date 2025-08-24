@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="/style/style.css"> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+            
+     
+</head>
+<body>
+
+  <!-- Header Section -->
+<header class="header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="/imag/ logo.jpg" alt="Brand Logo">
+    </a>
+
+    <!-- Category Dropdown -->
+    <details class="category-dropdown">
+      <summary>All</summary>
+      <div class="dropdown-content">
+        <p>Pants</p>
+        <p>Lower</p>
+        <p>Shirts</p>
+        <p>T-Shirts</p>
+        <p>Top</p>
+      </div>
+    </details>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button id="searchIcon" class="search-icon" onclick="performSearch()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="navibar" id="navbar">
+        <li><a href="/index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+        <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
+        <li id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
+        <li><i class="fa fa-times-circle" id="close"></i></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobile">
+      <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
+      <i id="bar" class="fa fa-outdent"></i>
+    </div>
+
+    <!-- Dark/Light Mode Toggle -->
+<div class="dark-mode-toggle" id="themeToggle">🌞</div>
+
+
+
+  </header>
+
+    <section id="page-header" class="shop-header">
+        <h2>Stay home</h2>
+        <p>save more with coupon& upto 70%off</p>
+      </section>
+   
+      <section id="product1" class="section"> 
+  
+  <div class="product-container">
+
+    <!-- Product Card -->
+  <div class="product" onclick="window.location.href='/singleproduct.html?product=1';">
+  <a href="singleproduct.html?product=16">
+    <img src="https://images.pexels.com/photos/8217415/pexels-photo-8217415.jpeg?_gl=1*s62gf1*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTIzMzEkajU5JGwwJGgw' alt="Product 16">
+    <div class="des">
+      <h6>White Hoodie</h6>
+      <div class="stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <div class="price-cart">
+        <h4>₹1499</h4>
+        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+          <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=17">
+        <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?_gl=1*3b804l*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTI2ODgkajU2JGwwJGgw" alt="Product 17">
+        <div class="des">
+            <h6>Sport Shoes</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹2499</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+           <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=18">
+        <img src="https://thumbs.dreamstime.com/b/colorful-indian-kurta-isolated-white-background-perfect-fashion-ethnic-wear-cultural-content-colorful-indian-kurta-364238177.jpg" alt="Product 18">
+        <div class="des">
+            <h6>Kurta</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹999</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+          <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=19">
+        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 19">
+        <div class="des">
+            <h6>Kids Shirt</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹349</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product">
+    <a href="singleproduct.html?product=20">
+        <img src="https://media.istockphoto.com/id/1218948901/photo/black-t-shirt-mock-up-on-wooden-hanger-rear-side-view.jpg?s=1024x1024&w=is&k=20&c=7w1NVUo15ytsI19yl4FTszPfVZlaL2CAVJqfcqFKM0U=" alt="Product 20">
+        <div class="des">
+            <h6>Plain T-shirt</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹199</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+           <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=21">
+        <img src="https://images.unsplash.com/photo-1718252540511-e958742e4165?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 21">
+        <div class="des">
+            <h6>Jeans</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹1299</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+    </section>
+
+
+  
+<section id="product1" class="section">
+  <h2>NEW ARRIVALS</h2>
+  <div class="product-container">
+    <div class="product" onclick="window.location.href='/singleproduct.html';">
+      <a href="singleproduct.html?product=22">
+        <img src="https://images.unsplash.com/photo-1628071645679-101ea5fad26f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 22">
+        <div class="des">
+          <h6>Printed T-shirt</h6>
+          <div>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div>
+            <h4>₹499</h4>
+            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+         <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=23">
+        <img src="https://images.pexels.com/photos/1280064/pexels-photo-1280064.jpeg?_gl=1*1rtl0px*_ga*ODE1NjcxMTEuMTc1NTY5MjIzNA..*_ga_8JE65Q40S6*czE3NTU2OTIyMzMkbzEkZzEkdDE3NTU2OTgwMjkkajMzJGwwJGgw" alt="Product 23">
+        <div class="des">
+            <h6>Sneakers</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹599</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+      <div class="product" onclick="window.location.href='/singleproduct.html?product=9';">
+    <a href="singleproduct.html?product=24">
+        <img src="https://cdn.pixabay.com/photo/2020/02/21/09/07/sandals-4866934_1280.jpg" alt="Product 24">
+        <div class="des">
+            <h6>High Heels</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹1199</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+            <div class="product" onclick="window.location.href='/singleproduct.html?product=10';">
+    <a href="singleproduct.html?product=25">
+        <img src="https://images.unsplash.com/photo-1602810319250-a663f0af2f75?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 25">
+        <div class="des">
+            <h6>Formal Shirt</h6>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div class="price-cart">
+                <h4>₹849</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+            <div class="product" onclick="window.location.href='/singleproduct.html?product=11';">
+    <a href="singleproduct.html?product=26">
+        <img src="https://images.unsplash.com/photo-1627913363993-95b23378265e?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 26">
+        <div class="des">
+            <h6>Anime Printed T-shirt</h6>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div class="price-cart">
+                <h4>₹699</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+ <div class="product">
+  <a href="singleproduct.html?product=27">
+    <img src="https://plus.unsplash.com/premium_photo-1755534537506-5528462e4e1f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 27">
+    <div class="des">
+      <h6>Casual T-shirts</h6>
+      <div>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <div>
+        <h4>₹399</h4>
+        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </a>
+</div>
+
+            <div class="product">
+    <a href="singleproduct.html?product=28">
+        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 28">
+        <div class="des">
+            <h6>Casual T-shirts</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹249</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="product">
+    <a href="singleproduct.html?product=29">
+        <img src="https://images.unsplash.com/photo-1721637222188-fa7bf56ceaf5?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 29">
+        <div class="des">
+            <h6>Jeans</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹749</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+      <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=30">
+        <img src="https://images.unsplash.com/photo-1659082056845-3b839c7551bf?q=80&w=369&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 30">
+        <div class="des">
+            <h6>Anime Printed Hoodie</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹949</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+   </div>
+   </section>
+
+
+
+   <section id="pagination">
+        <a href="shop.html">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+   </section>
+
+   
+   <footer  >
+    <div class="col">
+        <img src="/imag/ logo.jpg" alt="">
+        <h4>about us</h4>
+        <p><strong>Address:</strong>jawahar bhavan IIT ROORKEE</p>
+        <p><strong>Phone:</strong>**********</p>
+        <div class="follow">
+            <h4>follow us</h4>
+            <div class="icon">
+                <a href="#" class="fa fa-facebook"> </a>   
+                <a href="#" class="fa fa-twitter"> </a>  
+                <a href="#" class="fa fa-linkedin"> </a>   
+                <a href="#" class="fa fa-instagram"> </a>  
+            </div>
+        </div>
+    </div>
+    <div class="col">
+
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms and conditions</a>
+        <a href="#">contact us</a>
+    </div>
+    <div class="col">
+
+        <h4>My account</h4>
+        <a href="#">Sign In </a>
+        <a href="#">Veiw cart</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>from app store or Google play</p>
+        <div class="row">
+            <a href="https://apps.apple.com/app/your-ios-app-id" target="_blank">
+                <img src="https://w7.pngwing.com/pngs/270/658/png-transparent-app-store-apple-google-play-apple-text-logo-mobile-phones-thumbnail.png" alt="Download on the App Store (iOS)">
+            </a>
+        
+            <!-- Link to Google Play Store -->
+            <a href="https://play.google.com/store/apps/details?id=your.android.app.package" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexJ5lzjJWp0rlRO80IWZph86kxb8bU7-mkvwJx-MLnw&s" alt="Get it on Google Play (Android)">
+            </a>
+        </div>
+    </div>
+   </footer>
+
+   <script src="/js/source.js"></script>
+    <script>
+        // Update cart count when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+
+        // Add cart count display to the header
+        const cartIcon = document.querySelector('#lg-bag');
+        if (cartIcon) {
+            const cartCount = document.createElement('span');
+            cartCount.id = 'cart-count';
+            cartCount.className = 'cart-count';
+            cartCount.style.cssText = 'position: absolute; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; top: -8px; right: -8px;';
+            cartIcon.style.position = 'relative';
+            cartIcon.appendChild(cartCount);
+        }
+        
+        // Add click handlers to all cart icons
+        document.querySelectorAll('.fa-shopping-cart').forEach(function(cartIcon) {
+            const cartLink = cartIcon.closest('.ai');
+            if (cartLink) {
+                cartLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Find the closest product container and get its ID
+                    const productContainer = this.closest('.product');
+                    const productLink = productContainer.querySelector('a[href^="singleproduct.html"]');
+                    if (productLink) {
+                        const productId = new URLSearchParams(productLink.href.split('?')[1]).get('product');
+                        if (productId) {
+                            addToCart(productId);
+                            return false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
