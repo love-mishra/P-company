@@ -561,34 +561,80 @@ button:hover{
 }
 #sm-banner{
     display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+   background-color: rgb(255, 251, 234);
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    margin-top: 100px;
+    margin-bottom: 60px;
     /* width: 100%; */
     /* flex-wrap: wrap; */
 }
-#sm-banner .banner-box{
- 
+#sm-banner .top-container{
+    width: 100%;
+    height: 40%;
+     display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.top-container .content{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#main-heading{
+    margin: 30px;
+    font-weight: 400;
+    font-size: 30px
+}
+#btn-limited{
+    padding: 16px 24px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    background-color: #ff8072;
+    border-radius:25px;
+}
+.content img{
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+}
+#sm-banner .banner-box:nth-child(2){
 display: flex;
 font-size: 40px;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
+justify-content: center;
+height: 40vh;
+background-size: cover;
+background-image: url(https://static.vecteezy.com/system/resources/previews/027/550/118/non_2x/girl-with-shopping-bag-free-photo.jpg);
+}
+#sm-banner .banner-box:nth-child(3){
+display: flex;
+font-size: 40px;
+flex-direction: column;
+align-items: center;
 justify-content: center;
   
-background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/264/237/small/portrait-of-an-excited-beautiful-girl-wearing-dress-and-sunglasses-holding-shopping-bags-cheerful-young-woman-with-handbag-on-yellow-background-shopaholic-shopping-fashion-free-photo.jpg');
+background-image: url(https://static.vecteezy.com/system/resources/previews/017/342/705/non_2x/excited-young-women-enjoying-shopping-carrying-many-bags-of-many-colors-free-photo.jpg);
  
 height: 40vh;
 background-size: cover;
 }
-#sm-banner .banner-box:nth-child(2){
+#sm-banner .banner-box:nth-child(4){
    
     display: flex;
     font-size: 40px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-  
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsRRAddzqVXeTSh60_hedZh1VOTFJBjZIih3FB2c-C-T859R8bkAXNMVrCvJVNO5_g9vk&usqp=CAU');
-  
+    background-image: url(https://static.vecteezy.com/system/resources/previews/027/550/117/non_2x/girl-with-shopping-bag-free-photo.jpg);
     height: 40vh;
     opacity: 0.9;
     background-size: cover;
@@ -606,12 +652,12 @@ background-size: cover;
 #sm-banner .banner-box:nth-child(2) h4{
     font-size:30px;
     font-weight: 500;
-    color: #0d36bcd3;
+    color: white;
 }
 #sm-banner .banner-box:nth-child(2) h2{
     font-size:40px;
     font-weight: 800;
-    color: #df3535;
+    color: #ffffff;
 }
 #banner-3{
     display: flex;
