@@ -17,5 +17,28 @@
     Nihil voluptatum veritatis ad hic molestiae omnis quae. Possimus molestiae eum, porro perspiciatis deleniti libero tempore inventore ducimus ea at. Velit tenetur excepturi atque veniam odit architecto ut molestias soluta!
     Nobis quisquam est earum consequuntur, eligendi assumenda, officia itaque vel ipsam modi facilis incidunt nam alias. Corporis, consectetur inventore deserunt odit iste, suscipit fugit minima quo officia iusto quae atque.</p>
 </div>
+
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('themeToggle');
+
+  if(localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.textContent = "🌙";
+  } else {
+    themeToggle.textContent = "🌞";
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+});
+
+  </script>
+
 </body>
 </html>

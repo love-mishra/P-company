@@ -24,6 +24,8 @@ Accessible design following best practices.
 
 Tech Stack
 
+
+
 HTML5 – semantic and accessible structure.
 
 TailwindCSS – utility-first CSS framework for styling.

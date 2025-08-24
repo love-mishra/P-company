@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
     <link rel="stylesheet" type="text/css" href="/style/style.css">
 </head>
 <body>
-    <div id="result-message">
-        <!-- Result message will be displayed here -->
-    </div>
+    <main id="result-container">
+        <div id="result-message">
+            <!-- Result message will be displayed here -->
+        </div>
+    </main>
+    
 
-    <script  >
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-    // Get the message from the URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const message = urlParams.get('message');
+            // Get the message from the URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
 
-    // Display the message on the result page
-    const resultMessageElement = document.getElementById('result-message');
-    resultMessageElement.textContent = decodeURIComponent(message);
-    if (message=='Sign-up successful!'){
-        window.location.href = '/index.html?';
+            // Display the message on the result page
+            const resultMessageElement = document.getElementById('result-message');
+            if (message) {
+                resultMessageElement.textContent = decodeURIComponent(message);
             }
-});
 
-    </script> 
+            // Redirect if message is sign-up success
+            if (message === 'Sign-up successful!') {
+                setTimeout(() => {
+                    window.location.href = '/index.html';
+                }, 2000); // Redirect after 2 seconds
+            }
+        });
+    </script>
 </body>
 </html>

@@ -46,6 +46,8 @@ They have the responsibility to manage contributions, discussions, and other pro
 
 ---
 
+
+
 ## 🌐 Scope
 
 P-company’s Code of Conduct applies to all participants, including contributors, maintainers, moderators, and anyone interacting with the project’s resources. This includes all interactions in the project’s repositories, forums, and chat platforms.

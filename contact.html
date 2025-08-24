@@ -10,129 +10,175 @@
      
 </head>
 <body>
-    <section class="header">
-      
-        <a href="#" > <img src="/imag/ logo.jpg" alt=""></a>
-         <details><summary>All</summary>
-            <div>
-                <!-- Content of the dropdown -->
-                <p>pants</p>
-                <p>lower</p>
-                <p>shirts</p>
-                <p>T-SHIRTS</p>
-                <p>top</p>
-                <!-- Add more content if needed -->
-            </div>
+    <!-- Header -->
+  <header class="header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="/imag/ logo.jpg" alt="Brand Logo">
+    </a>
+
+    <!-- Category Dropdown -->
+    <details class="category-dropdown">
+      <summary>All</summary>
+      <div class="dropdown-content">
+        <p>Pants</p>
+        <p>Lower</p>
+        <p>Shirts</p>
+        <p>T-Shirts</p>
+        <p>Top</p>
+      </div>
     </details>
-    <input type="text" id="searchInput" placeholder="Enter your search query">
-    <!-- Add a search icon -->
-    <span id="searchIcon" class="search-icon" onclick="performSearch()">&#128269;</span>
-        <ul class="navibar" id="navbar">
-            <li><a href="/index.html" ><span>home</span><i class="fa fa-home"></i></a></li>
-            <li><a href="/shop.html"><span>shop</span><i class="fa fa-shopping-cart"></i></a></li>
-            <li><a href="/about.html"><span>about</span><i class="fa fa-info-circle"></i></a></li>
-            <li><a href="/contact.html" class="active"><span>contact</span><i class="fa fa-envelope"></i></a></li>
-            <li><a href="/sign.html"><span>sign</span><i class="fa fa-user"></i></a></li>
-            <li  id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
-            <a href="#" id="close"><i class="fa fa-times"></i></a>
-        </ul>
-        
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button id="searchIcon" class="search-icon" onclick="performSearch()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="navibar" id="navbar">
+        <li><a href="/index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+        <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="/contact.html" class="active"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
+        <li id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
+        <li><i class="fa fa-times-circle" id="close"></i></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
     <div id="mobile">
-        <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
-        <i id="bar" class="fa fa-outdent"></i>
+      <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
+      <i id="bar" class="fa fa-outdent"></i>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+<section id="buy" class="hero-banner">
+  <div class="hero-content">
+    <h1 class="hero-title">Super Deals</h1>
+    <p class="hero-subtitle">Buy and get <strong>70% OFF</strong> on each item</p>
+    <h2 class="hero-urgency">Hurry Up!</h2>
+    <a href="/shop.html" class="cta-btn">Shop Now</a>
+  </div>
+</section>
+
+   <section id="page-header" class="contact-header">
+    <div class="container">
+        <p>Thanks for contacting us</p>
+        <h2>Let's Talk</h2>
     </div>
 </section>
-    <section id="page-header" class="contact-header">
-        <p>Thanks for contacting us
-        </p>
-        <h2>#Let's talk </h2>
-      </section>
 
-      <section id="contact-detail" class="section">
-        <div class="detail">
-            <span>Get in touch</span>
-            <h2>visit one of our location and contact us </h2>
-            <h3>head office</h3>
-            <div>
-             <li>
+<section id="contact-detail" class="section">
+    <div class="detail">
+        <span>Get in touch</span>
+        <h2>Visit one of our locations and contact us</h2>
+        <h3>Head Office</h3>
+        <ul class="contact-info">
+            <li>
                 <i class="fa fa-map"></i>
                 <p>Voluptas accusantium maxime asperiores assumen</p>
-             </li>
-             <li>
+            </li>
+            <li>
                 <i class="fa fa-envelope"></i>
                 <p>contact@some.com</p>
-             </li>
-             <li>
+            </li>
+            <li>
                 <i class="fa fa-phone"></i>
-                <p>below is number is given for calling</p>
-             </li>
-             <li>
+                <p>Below is the number for calling</p>
+            </li>
+            <li>
                 <i class="fa fa-clock-o"></i>
-                <p>MON-SUT:10AM-11PM</p>
-             </li>
-            </div>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55361.61482197111!2d77.85362621094113!3d29.861363053908235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb36e08b35119%3A0x798f5dc25ebd0a72!2sRoorkee%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1693894030845!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </section>
-      <section id="form-detail" class="section">
-        <span>Leave a message</span>
-        <h2>we are here to hear you</h2>
-        <input type="text" placeholder="your-name">
-        <input type="text" placeholder="e-mail">
-        <input type="text" placeholder="subject">
-        <textarea name="" id="" cols="30" rows="10" placeholder="your-message"></textarea>
-        <button class="normal" id="submit-button">Submit</button>
-      </section>
-      <footer  >
-        <div class="col">
-            <img src="/imag/ logo.jpg" alt="">
-            <h4>about us</h4>
-            <p><strong>Address:</strong>jawahar bhavan IIT ROORKEE</p>
-            <p><strong>Phone:</strong>**********</p>
-            <div class="follow">
-                <h4>follow us</h4>
-                <div class="icon">
-                    <a href="#" class="fa fa-facebook"> </a>   
-                    <a href="#" class="fa fa-twitter"> </a>  
-                    <a href="#" class="fa fa-linkedin"> </a>   
-                    <a href="#" class="fa fa-instagram"> </a>  
-                </div>
-            </div>
-        </div>
-        <div class="col">
-    
-            <h4>About</h4>
-            <a href="#">About us</a>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms and conditions</a>
-            <a href="#">contact us</a>
-        </div>
-        <div class="col">
-    
-            <h4>My account</h4>
-            <a href="#">Sign In </a>
-            <a href="#">Veiw cart</a>
-            <a href="#">Track my order</a>
-            <a href="#">Help</a>
-        </div>
-        <div class="col install">
-            <h4>Install App</h4>
-            <p>from app store or Google play</p>
-            <div class="row">
-                <a href="https://apps.apple.com/app/your-ios-app-id" target="_blank">
-                    <img src="https://w7.pngwing.com/pngs/270/658/png-transparent-app-store-apple-google-play-apple-text-logo-mobile-phones-thumbnail.png" alt="Download on the App Store (iOS)">
-                </a>
-            
-                <!-- Link to Google Play Store -->
-                <a href="https://play.google.com/store/apps/details?id=your.android.app.package" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexJ5lzjJWp0rlRO80IWZph86kxb8bU7-mkvwJx-MLnw&s" alt="Get it on Google Play (Android)">
-                </a>
-            </div>
-        </div>
-       </footer>
+                <p>MON-SAT: 10AM - 11PM</p>
+            </li>
+        </ul>
+    </div>
 
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55361.61482197111!2d77.85362621094113!3d29.861363053908235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb36e08b35119%3A0x798f5dc25ebd0a72!2sRoorkee%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1693894030845!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+<section id="form-detail" class="section">
+    <div class="form-header">
+        <span>Leave a message</span>
+        <h2>We are here to hear you</h2>
+    </div>
+
+    <form id="contactForm">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="E-mail" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Your Message" cols="30" rows="8" required></textarea>
+        </div>
+        <button type="submit" class="normal" id="submit-button">Submit</button>
+    </form>
+</section>
+
+      <footer class="footer">
+  <div class="col">
+    <img src="/imag/ logo.jpg" alt="logo" class="footer-logo">
+    <h4>About Us</h4>
+    <p><strong>Address:</strong> Jawahar Bhavan, IIT Roorkee</p>
+    <p><strong>Phone:</strong> **********</p>
+    <div class="follow">
+      <h4>Follow Us</h4>
+      <div class="icon">
+        <a href="#" class="fa fa-facebook"></a>   
+        <a href="#" class="fa fa-twitter"></a>  
+        <a href="#" class="fa fa-linkedin"></a>   
+        <a href="#" class="fa fa-instagram"></a>  
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h4>About</h4>
+    <a href="#">About Us</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+
+
+        <div class="col">
+    <h4>My Account</h4>
+    <a href="#">Sign In</a>
+    <a href="#">View Cart</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+  </div>
+
+  <div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+      <a href="https://apps.apple.com/app/your-ios-app-id" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg" alt="App Store" class="store-btn">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=your.android.app.package" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="store-btn">
+      </a>
+    </div>
+  </div>
+</footer>
    <script src="/js/source.js">
     document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.getElementById('submit-button');
@@ -160,5 +206,28 @@
 });
 
    </script>
+
+
+   
+   <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('themeToggle');
+
+  if(localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.textContent = "🌙";
+  } else {
+    themeToggle.textContent = "🌞";
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+});
+
+  </script>
+
 </body>
 </html>
