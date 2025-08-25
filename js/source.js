@@ -454,3 +454,63 @@ function performSearch() {
     }
 }
 
+// Add to Cart function for product cards
+function addToCart(productName, price, productId) {
+    // Prevent the parent anchor link from triggering
+    event.preventDefault();
+    event.stopPropagation();
+    
+    // Get the product image from the current product card
+    const productCard = event.target.closest('.product');
+    const productImage = productCard.querySelector('img').src;
+    
+    // Get existing cart from localStorage or create empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Check if product already exists in cart
+    const existingItemIndex = cart.findIndex(item => item.id === productId);
+    
+    if (existingItemIndex > -1) {
+        // If product exists, increase quantity
+        cart[existingItemIndex].quantity += 1;
+    } else {
+        // If new product, add to cart
+        cart.push({
+            id: productId,
+            title: productName,
+            price: price,
+            quantity: 1,
+            image: productImage
+        });
+    }
+    
+    // Save updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Show success feedback
+    const button = event.target.closest('.add-to-cart-btn');
+    const originalText = button.innerHTML;
+    
+    button.innerHTML = '<i class="fa fa-check"></i><span>Added!</span>';
+    button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+    
+    setTimeout(() => {
+        button.innerHTML = originalText;
+        button.style.background = 'linear-gradient(135deg, #088178, #0d9488)';
+    }, 1500);
+    
+    // Update cart counter if it exists
+    updateCartCounter();
+}
+
+// Update cart counter in header
+function updateCartCounter() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    // If there's a cart counter element, update it
+    const cartCounter = document.querySelector('.cart-counter');
+    if (cartCounter) {
+        cartCounter.textContent = totalItems;
+    }
+}

@@ -2,7 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Courier, monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+/* Section spacing */
+section {
+    margin: 0;
+    padding: 0;
 }
 .header {
     width: 100%;
@@ -402,216 +418,637 @@ margin: 20px 35%;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    margin: 0;
 }
 
 .fe-box {
-    width: 200px;
-    height: 200px;
-    padding: 10px;
+    width: 240px;
+    height: 240px;
+    padding: 30px 20px;
     margin: 25px;
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px rgba(226, 210, 210, 0.475);
-    border: rgba(245, 245, 245, 0.208);
-    transition: box-shadow 0.3s ease;
-    cursor: pointer; /* Add cursor pointer on hover */
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(8, 129, 120, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.fe-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.1), rgba(13, 148, 136, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.fe-box:hover::before {
+    opacity: 1;
+}
+
+.fe-box > * {
+    position: relative;
+    z-index: 2;
 }
 
 .fe-box img {
-    width: 100%;
-    height: 90%;
-    border-radius: 5px;
-    padding-bottom: 0;
-    
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
  
 .fe-box h6 {
-    line-height: 1;
-    color: rgba(19, 19, 17, 0.56);
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    display: inline-block;
-    background-color: rgb(206, 171, 177);
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #088178, #0d9488);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-/* Apply hover effect to all .fe-box elements */
 .fe-box:hover {
-    box-shadow: 10px 10px 5px rgba(226, 210, 210, 0.475);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(8, 129, 120, 0.2);
+    border-color: #088178;
 }
 
-/* Define specific background colors for each fe-box */
-.fe-box:nth-child(2) h6 {
-    background-color: bisque;
+.fe-box:hover img {
+    transform: scale(1.1);
 }
 
-.fe-box:nth-child(3) h6 {
-    background-color: aqua;
+.fe-box:hover h6 {
+    background: linear-gradient(135deg, #0d9488, #088178);
+    box-shadow: 0 8px 20px rgba(8, 129, 120, 0.3);
 }
 
-.fe-box:nth-child(4) h6 {
-    background-color: burlywood;
-}
-
+/* Remove specific nth-child colors as we're using consistent design */
+.fe-box:nth-child(2) h6,
+.fe-box:nth-child(3) h6,
+.fe-box:nth-child(4) h6,
 .fe-box:nth-child(5) h6 {
-    background-color: rgba(255, 228, 196, 0.504);
+    background: linear-gradient(135deg, #088178, #0d9488);
 }
 #product1 {
     text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
 }
+
+#product1 h2.features {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#product1 h2.features::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #088178, #0d9488);
+    border-radius: 2px;
+}
+
 #product1 .product-container{
     display: flex;
     text-align: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    gap: 30px;
+    padding: 0 40px;
 }
 #product1 .product:hover{
-    border-radius: 35px;
-    box-shadow: 5px 5px 5px 1px rgba(226, 210, 210, 0.475);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(8, 129, 120, 0.15);
+    border: 2px solid #088178;
 }
+
 #product1 .product{
-    width: 23%;
-    /* min-width:230px; */
-    height: 5%;
-    font-size: 20px;
-
-    padding: 5px 10px;
-    border-radius: 30px;
-    /* border-radius: 50px solid rgba(255, 255, 255, 0.391); */
-
-    box-shadow: 3px 3px 3px 3px rgba(226, 210, 210, 0.475);
-    margin: 25px 20px;
+    width: 280px;
+    min-width: 260px;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
 }
-#product1 h2{
-    font-size: 40px;
-    background-color: aqua;
+
+#product1 .product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.05), rgba(13, 148, 136, 0.02));
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
+
+#product1 .product:hover::before {
+    opacity: 1;
+}
+
+#product1 .product > * {
+    position: relative;
+    z-index: 2;
+}
+
 #product1 .product a{
     text-decoration: none;
     width:100%;
+    display: block;
 }
+
 #product1 .product a img{
-    width:100%;
-    padding: 0;
-    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
-#product1 .product  .des{
+
+#product1 .product:hover img {
+    transform: scale(1.05);
+}
+
+#product1 .product .des{
     text-align: start;
+    padding-top: 10px;
 }
-#product1 .product  .des h6{
-    font-size: 16px;
-    color: #1a1a1a;
-}
-#product1 .product .des i{
-font-size: 15px;
-color: rgba(255, 217, 0, 0.858);
-}
-#product1 .product .des .ai i{
-    width: 40px;
-    height: 40px;
+
+#product1 .product .des h6{
+    font-size: 18px;
+    color: #333;
     font-weight: 600;
-    font-size: 40px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+#product1 .product:hover .des h6 {
     color: #088178;
-    background-color: #e8f6ea;
+}
+
+#product1 .product .des i{
+    font-size: 14px;
+    color: #ffd700;
+    margin-right: 2px;
+}
+
+#product1 .product .des .price-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#product1 .product .des .ai i{
+    width: 45px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(135deg, #088178, #0d9488);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(8, 129, 120, 0.3);
+}
+
+#product1 .product .des .ai i:hover {
+    background: linear-gradient(135deg, #0d9488, #088178);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(8, 129, 120, 0.4);
+}
+
+/* Add to Cart Button Styles */
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #088178, #0d9488);
+    color: white;
+    border: none;
     border-radius: 25px;
-}
-#product1 .product a .des h4{
-    font-size: 15px;
-    font-weight: 800;
-}
-#banner{
-margin: 40px 0;
-display: flex;
-font-size: 40px;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-background-image: url('https://media.istockphoto.com/id/1413355572/photo/discount-word-made-from-realistic-gold-with-star-on-red-background-3d-illustration.jpg?s=1024x1024&w=is&k=20&c=GhpptaGZI7UVYTG9rZKrV3yn80ReZMWxOYPPaHzLtDk=');
-width: 100%;
-height: 40vh;
-background-size: cover;
-}
-button.normal{
-    font-size: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px ;
-    outline: none;
-    transition: 0.2s;
-    padding: 15px 30px;
-    margin: 25px ;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(8, 129, 120, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    justify-content: center;
+}
 
-   
+.add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #0d9488, #088178);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 129, 120, 0.4);
 }
-button:hover{
-    background-color: #088178;
+
+.add-to-cart-btn i {
+    font-size: 16px;
+    margin: 0;
 }
-#banner h2{
-    font-size: 40px;
-    color: white;
+
+.add-to-cart-btn span {
+    font-size: 12px;
     font-weight: 600;
 }
-#banner h4{
-    font-size: 25px;
-    color: white;
-    font-weight: 500;
+
+/* Fix product card interaction */
+#product1 .product {
+    position: relative;
 }
-#sm-banner{
+
+#product1 .product .add-to-cart-btn {
+    position: relative;
+    z-index: 10;
+    pointer-events: all;
+    margin: 15px 0 10px 0;
+}
+
+/* Special styling for buttons placed below stars */
+#product1 .product .des .stars + .add-to-cart-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: center;
     display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-    /* width: 100%; */
-    /* flex-wrap: wrap; */
+    align-items: center;
 }
-#sm-banner .banner-box{
- 
-display: flex;
-font-size: 40px;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-  
-background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/264/237/small/portrait-of-an-excited-beautiful-girl-wearing-dress-and-sunglasses-holding-shopping-bags-cheerful-young-woman-with-handbag-on-yellow-background-shopaholic-shopping-fashion-free-photo.jpg');
- 
-height: 40vh;
-background-size: cover;
+
+/* Ensure proper spacing for price section after button */
+#product1 .product .des .add-to-cart-btn + .price-cart {
+    margin-top: 10px;
 }
-#sm-banner .banner-box:nth-child(2){
-   
+
+#product1 .product .des h4{
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+/* Hero Section - New Structure */
+#hero, .hero-banner {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(8, 129, 120, 0.7)), url('https://media.istockphoto.com/id/1413355572/photo/discount-word-made-from-realistic-gold-with-star-on-red-background-3d-illustration.jpg?s=1024x1024&w=is&k=20&c=GhpptaGZI7UVYTG9rZKrV3yn80ReZMWxOYPPaHzLtDk=');
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.8), rgba(13, 148, 136, 0.6));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-title, h1.hero-title {
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.btn-primary, .btn-secondary {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    color: #088178;
+    border: 2px solid #088178;
+    box-shadow: 0 4px 15px rgba(8, 129, 120, 0.2);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #088178, #0d9488);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+.btn-primary:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 129, 120, 0.4);
+    border-color: #0d9488;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+.highlight {
+    color: #ffd700;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+button.normal {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    color: #088178;
+    border: 2px solid #088178;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+    padding: 15px 40px;
+    margin: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(8, 129, 120, 0.2);
+    animation: fadeInUp 1s ease-out 0.6s both;
+    position: relative;
+    overflow: hidden;
+}
+
+button.normal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #088178, #0d9488);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+button.normal:hover::before {
+    left: 0;
+}
+
+button.normal:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 129, 120, 0.4);
+    border-color: #0d9488;
+}
+/* Legacy Banner Support */
+#banner {
+    margin: 0;
     display: flex;
     font-size: 40px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(8, 129, 120, 0.7)), url('https://media.istockphoto.com/id/1413355572/photo/discount-word-made-from-realistic-gold-with-star-on-red-background-3d-illustration.jpg?s=1024x1024&w=is&k=20&c=GhpptaGZI7UVYTG9rZKrV3yn80ReZMWxOYPPaHzLtDk=');
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.8), rgba(13, 148, 136, 0.6));
+    z-index: 1;
+}
+
+#banner > * {
+    position: relative;
+    z-index: 2;
+}
+#banner h2{
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+}
+
+#banner h4{
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.5;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    margin: 0;
+}
+
+#sm-banner .banner-box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-  
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsRRAddzqVXeTSh60_hedZh1VOTFJBjZIih3FB2c-C-T859R8bkAXNMVrCvJVNO5_g9vk&usqp=CAU');
-  
-    height: 40vh;
-    opacity: 0.9;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(13, 148, 136, 0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/016/264/237/small/portrait-of-an-excited-beautiful-girl-wearing-dress-and-sunglasses-holding-shopping-bags-cheerful-young-woman-with-handbag-on-yellow-background-shopaholic-shopping-fashion-free-photo.jpg');
+    height: 300px;
     background-size: cover;
-    }
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#sm-banner .banner-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.8), rgba(13, 148, 136, 0.7));
+    z-index: 1;
+}
+
+#sm-banner .banner-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+#sm-banner .banner-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(8, 129, 120, 0.2);
+}
+
+#sm-banner .banner-box:nth-child(2){
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(13, 148, 136, 0.8)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsRRAddzqVXeTSh60_hedZh1VOTFJBjZIih3FB2c-C-T859R8bkAXNMVrCvJVNO5_g9vk&usqp=CAU');
+    background-size: cover;
+    background-position: center;
+}
+
+#sm-banner .banner-box:nth-child(3){
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(13, 148, 136, 0.8)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zmxhc2glMjBzYWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60');
+    background-size: cover;
+    background-position: center;
+}
+
 #sm-banner h4{
-    font-size:30px;
-    font-weight: 300;
-    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 #sm-banner h2{
-    font-size:40px;
-    font-weight: 800;
-    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
 #sm-banner .banner-box:nth-child(2) h4{
-    font-size:30px;
-    font-weight: 500;
-    color: #0d36bcd3;
+    color: rgba(255, 255, 255, 0.9);
 }
+
 #sm-banner .banner-box:nth-child(2) h2{
-    font-size:40px;
-    font-weight: 800;
-    color: #df3535;
+    color: white;
 }
 #banner-3{
     display: flex;
@@ -669,6 +1106,146 @@ background-size: cover;
         font-weight: 500;
         font-size: 20px;
     }
+
+/* Center Banner Styles */
+#center-banner {
+    margin: 60px 0;
+    padding: 0;
+}
+
+#center-banner .center-banner-content {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.9), rgba(13, 148, 136, 0.7)), 
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 20px;
+}
+
+#center-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 129, 120, 0.8), rgba(13, 148, 136, 0.6));
+    z-index: 1;
+}
+
+#center-banner .banner-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#center-banner .banner-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#center-banner .banner-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#center-banner .banner-text .highlight {
+    color: #fbbf24;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#center-banner .banner-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#center-banner .banner-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#center-banner .btn-shop,
+#center-banner .btn-explore {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#center-banner .btn-shop {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+#center-banner .btn-shop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(251, 191, 36, 0.4);
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+#center-banner .btn-explore {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#center-banner .btn-explore:hover {
+    background: white;
+    color: #0d9488;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #center-banner .banner-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    #center-banner .banner-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    #center-banner .banner-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #center-banner .btn-shop,
+    #center-banner .btn-explore {
+        width: 200px;
+        text-align: center;
+    }
+    
+    #center-banner .center-banner-content {
+        margin: 0 10px;
+        height: 60vh;
+    }
+}
+
 /* Base footer styling */
 footer {
     display: flex;
@@ -2620,6 +3197,27 @@ body.dark-mode .product-actions {
     background-color: #1e1e1e;
     padding: 15px;
     border-radius: 12px;
+}
+
+/* Hero Section Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 body.dark-mode .product-actions select,

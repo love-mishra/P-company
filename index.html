@@ -58,12 +58,18 @@
   </header>
 
   <!-- Hero Banner -->
-<section id="buy" class="hero-banner">
+<section id="hero" class="hero-banner">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">Super Deals</h1>
-    <p class="hero-subtitle">Buy and get <strong>70% OFF</strong> on each item</p>
-    <h2 class="hero-urgency">Hurry Up!</h2>
-    <a href="/shop.html" class="cta-btn">Shop Now</a>
+    <div class="hero-text">
+      <h1 class="hero-title">Discover Your Style</h1>
+      <p class="hero-subtitle">Exclusive collection with up to <span class="highlight">70% OFF</span></p>
+      <p class="hero-description">Premium quality fashion at unbeatable prices</p>
+      <div class="hero-buttons">
+        <a href="/shop.html" class="btn-primary">Shop Now</a>
+        <a href="/about.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -113,13 +119,14 @@
       </div>
       <div class="price-cart">
         <h4>₹299</h4>
-        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+        <button class="add-to-cart-btn" onclick="addToCart('t-shirt', 299, 1)">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
       </div>
     </div>
   </a>
 </div>
-
-
 
           <div class="product" onclick="window.location.href='/singleproduct.html';">
     <a href="singleproduct.html?product=2">
@@ -135,7 +142,10 @@
             </div>
             <div>
                 <h4>₹399</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('full-sleeve-t-shirt', 399, 2)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -156,7 +166,10 @@
             </div>
             <div>
                 <h4>₹599</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('hoodies', 599, 3)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -176,7 +189,10 @@
             </div>
             <div>
                 <h4>₹799</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('coat-for-women', 799, 4)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -196,7 +212,10 @@
             </div>
             <div>
                 <h4>₹349</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('black-t-shirt', 349, 5)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -217,7 +236,10 @@
             </div>
             <div>
                 <h4>₹499</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('frocks-for-girls', 499, 6)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -250,7 +272,10 @@
           </div>
           <div>
             <h4>₹299</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            <button class="add-to-cart-btn" onclick="addToCart('tops-for-girls', 299, 7)">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
           </div>
         </div>
       </a>
@@ -271,7 +296,10 @@
             </div>
             <div>
                 <h4>₹299</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('tops-for-girls-2', 299, 8)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -291,7 +319,10 @@
             </div>
             <div>
                 <h4>₹999</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('frocks', 999, 9)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -311,8 +342,11 @@
             </div>
             <div class="price-cart">
                 <h4>₹699</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
             </div>
+            <button class="add-to-cart-btn" onclick="addToCart('frocks-for-kids', 699, 10)">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
         </div>
     </a>
 </div>
@@ -331,8 +365,11 @@
             </div>
             <div class="price-cart">
                 <h4>₹449</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
             </div>
+             <button class="add-to-cart-btn" onclick="addToCart('womens-top', 449, 11)">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
         </div>
     </a>
 </div>
@@ -351,7 +388,10 @@
       </div>
       <div>
         <h4>₹249</h4>
-        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+        <button class="add-to-cart-btn" onclick="addToCart('t-shirts', 249, 12)">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
       </div>
     </div>
   </a>
@@ -371,7 +411,10 @@
             </div>
             <div>
                 <h4>₹399</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('cotton-t-shirts', 399, 13)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -390,7 +433,10 @@
             </div>
             <div>
                 <h4>₹799</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('trousers', 799, 14)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -411,7 +457,10 @@
             </div>
             <div>
                 <h4>₹249</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+                <button class="add-to-cart-btn" onclick="addToCart('cut-t-shirts', 249, 15)">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </a>
@@ -420,15 +469,32 @@
    </div>
    </section>
 
-
-   
-
+   <!-- Center Promotional Banner -->
+   <section id="center-banner" class="section">
+     <div class="center-banner-content">
+       <div class="banner-overlay"></div>
+       <div class="banner-text">
+         <h1>MEGA SALE EVENT</h1>
+         <h2>UP TO <span class="highlight">60% OFF</span></h2>
+         <p>Limited time offer on all categories</p>
+         <div class="banner-buttons">
+           <a href="/shop.html" class="btn-shop">Shop Now</a>
+           <a href="/about.html" class="btn-explore">Explore More</a>
+         </div>
+       </div>
+     </div>
+   </section>
 
  <section id="sm-banner" class="section">
   <div class="banner-box">
     <h4>Crazy deal</h4>
     <h2>Buy 1 and get 1 free</h2>
     <a href="/learn.html"><button class="fancy-btn">Learn More</button></a>
+  </div>
+  <div class="banner-box">
+    <h4>Flash Sale</h4>
+    <h2>Limited Time Only</h2>
+    <a href="/shop.html"><button class="fancy-btn">Shop Now</button></a>
   </div>
   <div class="banner-box">
     <h4>Spring/Summer</h4>
