@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop</title>
-
-<!-- Font Awesome -->
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
- <link rel="stylesheet" href="/style/style.css"> 
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="/style/style.css"> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+            
+     
 </head>
 <body>
 
-<!-- Header Section -->
+  <!-- Header Section -->
 <header class="header">
-    <a href="#" class="logo"><img src="/imag/ logo.jpg" alt="Brand Logo"></a>
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="/imag/ logo.jpg" alt="Brand Logo">
+    </a>
 
+    <!-- Category Dropdown -->
     <details class="category-dropdown">
-        <summary>All</summary>
-        <div class="dropdown-content">
-            <p data-category="men">Men</p>
-            <p data-category="women">Women</p>
-            <p data-category="kid">Kid</p>
-        </div>
+      <summary>All</summary>
+      <div class="dropdown-content">
+        <p>Pants</p>
+        <p>Lower</p>
+        <p>Shirts</p>
+        <p>T-Shirts</p>
+        <p>Top</p>
+      </div>
     </details>
 
+    <!-- Search Bar -->
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search products...">
-        <button id="searchIcon" class="search-icon"><i class="fa fa-search"></i></button>
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button id="searchIcon" class="search-icon" onclick="performSearch()">
+        <i class="fa fa-search"></i>
+      </button>
     </div>
 
+    <!-- Navigation -->
     <nav>
-       <ul class="navibar" id="navbar">
-        <li><a href="/index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+      <ul class="navibar" id="navbar">
+        <li><a href="/index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="/shop.html" class="active"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
         <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
         <li><a href="/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
         <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
@@ -43,284 +51,373 @@
       </ul>
     </nav>
 
+    <!-- Mobile Menu -->
+
     <div id="mobile">
-        <a href="#"><i class="fa fa-shopping-basket"></i></a>
-        <i id="bar" class="fa fa-outdent"></i>
+      <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
+      <i id="bar" class="fa fa-outdent"></i>
     </div>
 
-    <div class="dark-mode-toggle" id="themeToggle">🌞</div>
-</header>
+    <!-- Dark/Light Mode Toggle -->
+<div class="dark-mode-toggle" id="themeToggle">🌞</div>
 
-<!-- Category Filter Buttons -->
-<section id="category-filters" class="section">
-  <div class="filter-btns">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="men">Men</button>
-    <button class="filter-btn" data-filter="women">Women</button>
-    <button class="filter-btn" data-filter="kid">Kids</button>
-  </div>
-</section>
 
-<!-- Products Section -->
-<section id="product1" class="section"> 
+
+  </header>
+
+    <section id="page-header" class="shop-header">
+        <h2>Stay home</h2>
+        <p>save more with coupon& upto 70%off</p>
+      </section>
+   
+      <section id="product1" class="section"> 
+  
   <div class="product-container">
-    
-    <!-- Men Products -->
-    <div class="product" data-category="men">
-      <a href="singleproduct.html?product=1">
-        <img src="https://media.istockphoto.com/id/587783998/photo/close-up-of-a-t-shirt.jpg?s=1024x1024&w=is&k=20&c=i0_NxNwqfWf5r76xhaVQ7MaQdWdKAy1y_F5Is3uwyFg=" alt="Product 1">
-        <div class="des">
-          <h6>T-shirt</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹299</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </a>
-    </div>
 
-    <div class="product" data-category="men">
-      <a href="singleproduct.html?product=2">
-        <img src="https://images.unsplash.com/photo-1618354691321-e851c56960d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1988&q=80" alt="Product 2">
-        <div class="des">
-          <h6>Full sleeve T-shirt</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹399</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </a>
+    <!-- Product Card -->
+  <div class="product" onclick="window.location.href='/singleproduct.html?product=1';">
+  <a href="singleproduct.html?product=1">
+    <img src="https://media.istockphoto.com/id/587783998/photo/close-up-of-a-t-shirt.jpg?s=1024x1024&w=is&k=20&c=i0_NxNwqfWf5r76xhaVQ7MaQdWdKAy1y_F5Is3uwyFg=" alt="Product 1">
+    <div class="des">
+      <h6>T-shirt</h6>
+      <div class="stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <div class="price-cart">
+        <h4>₹299</h4>
+        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+      </div>
     </div>
+  </a>
+</div>
 
-    <div class="product" data-category="men">
-      <a href="singleproduct.html?product=12">
-        <img src="https://img3.junaroad.com/uiproducts/20165393/zoom_0-1691736139.jpg" alt="Product 12">
+
+
+
+          <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=2">
+        <img src="https://images.unsplash.com/photo-1618354691321-e851c56960d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1988&q=80" alt="Product 2">
         <div class="des">
-          <h6>T-shirts</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹249</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Full sleeve T-shirt</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹399</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="men">
-      <a href="singleproduct.html?product=5">
-        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60" alt="Product 5">
+
+           <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=3">
+        <img src="https://images.unsplash.com/photo-1616150840617-a0124ea42a1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80" alt="Product 3">
         <div class="des">
-          <h6>Black T-shirt</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹349</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Hoodies</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹599</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="men">
-      <a href="singleproduct.html?product=15">
-        <img src="https://media.istockphoto.com/id/173867932/photo/red-football-shirt.jpg?s=1024x1024&w=is&k=20&c=qggoJiI6Ldj6WkBn744yjaYSqfl82d1-9ZnBARKXFGc=" alt="Product 15">
-        <div class="des">
-          <h6>Cut T-shirts</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹249</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Women Products -->
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=3">
-        <img src="https://images.unsplash.com/photo-1616150840617-a0124ea42a1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=3087&q=80" alt="Product 3">
-        <div class="des">
-          <h6>Hoodies</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹599</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=4">
+          <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=4">
         <img src="https://media.istockphoto.com/id/1222396502/photo/gorgeous-young-female-in-classic-suit-black-shoes-and-grey-coat-vintage-chair-womans-clothes.jpg?s=1024x1024&w=is&k=20&c=QuLFE2xi9ZA81cjnGPF76otE_UCvxRTIrW0_O2aEwX4=" alt="Product 4">
         <div class="des">
-          <h6>Coat for Women</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹799</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Coat for Women</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹799</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="women">
+<div class="product">
+    <a href="singleproduct.html?product=5">
+        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60" alt="Product 5">
+        <div class="des">
+            <h6>Black T-shirt</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹349</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+           <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=6">
+        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="Product 6">
+        <div class="des">
+            <h6>Frock's for Girls</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹499</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+    </section>
+
+
+  
+<section id="product1" class="section">
+  <h2>NEW ARRIVALS</h2>
+  <div class="product-container">
+    <div class="product" onclick="window.location.href='/singleproduct.html';">
       <a href="singleproduct.html?product=7">
         <img src="https://cdn.shopify.com/s/files/1/0486/0634/7416/products/TP592REDD_M2.jpg?v=1746621912" alt="Product 7">
         <div class="des">
           <h6>Top's for Girls</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          <div>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
           </div>
-          <div class="price-cart">
+          <div>
             <h4>₹299</h4>
             <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
           </div>
         </div>
       </a>
     </div>
+  
 
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=8">
+         <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=8">
         <img src="https://cdn.shopify.com/s/files/1/0486/0634/7416/files/FSDR1079BRPR_2.jpg?v=1696505392" alt="Product 8">
         <div class="des">
-          <h6>Top's for Girls</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹299</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Top's for Girls</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹299</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=9">
+      <div class="product" onclick="window.location.href='/singleproduct.html?product=9';">
+    <a href="singleproduct.html?product=9">
         <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/2/tr:w-960,/12e1034TWDR705.jpg?rnd=20200526195200" alt="Product 9">
         <div class="des">
-          <h6>Frock's</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹999</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Frock's</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹999</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=10">
+            <div class="product" onclick="window.location.href='/singleproduct.html?product=10';">
+    <a href="singleproduct.html?product=10">
         <img src="https://m.media-amazon.com/images/I/718J1laiICL._AC_UY1100_.jpg" alt="Product 10">
         <div class="des">
-          <h6>Frock's for Kids</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹699</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Frock's for Kids</h6>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div class="price-cart">
+                <h4>₹699</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=11">
+            <div class="product" onclick="window.location.href='/singleproduct.html?product=11';">
+    <a href="singleproduct.html?product=11">
         <img src="https://img3.junaroad.com/uiproducts/19670369/zoom_0-1681130955.jpg" alt="Product 11">
         <div class="des">
-          <h6>Women's Top</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹449</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Women's Top</h6>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div class="price-cart">
+                <h4>₹449</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="product" data-category="women">
-      <a href="singleproduct.html?product=14">
-        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Product 14">
+ <div class="product">
+  <a href="singleproduct.html?product=12">
+    <img src="https://img3.junaroad.com/uiproducts/20165393/zoom_0-1691736139.jpg" alt="Product 12">
+    <div class="des">
+      <h6>T-shirts</h6>
+      <div>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <div>
+        <h4>₹249</h4>
+        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </a>
+</div>
+
+            <div class="product">
+    <a href="singleproduct.html?product=13">
+        <img src="https://img3.junaroad.com/uiproducts/19514453/zoom_0-1678805803.jpg" alt="Product 13">
         <div class="des">
-          <h6>Trousers</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹799</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Cotton T-shirts</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹399</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
-
-    <!-- Kid Products -->
-    <div class="product" data-category="kid">
-      <a href="singleproduct.html?product=6">
-        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60" alt="Product 6">
+    </a>
+</div>
+<div class="product">
+    <a href="singleproduct.html?product=14">
+        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Product 14">
         <div class="des">
-          <h6>Frock's for Girls</h6>
-          <div class="stars">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-          </div>
-          <div class="price-cart">
-            <h4>₹499</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-          </div>
+            <h6>Trousers</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹799</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
         </div>
-      </a>
-    </div>
-
-  </div>
-</section>
+    </a>
+</div>
 
 
-<!-- Pagination -->
-<section id="pagination">
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-</section>
+      <div class="product" onclick="window.location.href='/singleproduct.html';">
+    <a href="singleproduct.html?product=15">
+        <img src="https://media.istockphoto.com/id/173867932/photo/red-football-shirt.jpg?s=1024x1024&w=is&k=20&c=qggoJiI6Ldj6WkBn744yjaYSqfl82d1-9ZnBARKXFGc=" alt="Product 15">
+        <div class="des">
+            <h6>Cut T-shirts</h6>
+            <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <div>
+                <h4>₹249</h4>
+                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </a>
+</div>
 
-<!-- Footer -->
+   </div>
+   </section>
+
+
+
+   <section id="pagination">
+        <a href="#">1</a>
+        <a href="shop2.html">2</a>
+        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+   </section>
+
 <footer>
     <div class="col">
-        <img src="https://via.placeholder.com/100x50?text=Logo" alt="logo" class="footer-logo">
-        <p>Crafted for a smooth shopping experience.<br>Fast, responsive & user-friendly.</p>
+        <img src="/imag/ logo.jpg" alt="logo" class="footer-logo">
+        <p>Crafted for a smooth shopping experience.<br>Designed to be fast, responsive, and user-friendly.</p>
         <div class="follow">
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fas fa-envelope"></a>
+            <div class="icon">
+                <a href="#" class="fa fa-instagram"></a>  
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-envelope"></a>
+            </div>
         </div>
     </div>
     <div class="col">
         <h4>Navigation</h4>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/contact.html">Contact</a>
     </div>
     <div class="col">
         <h4>Legal</h4>
@@ -328,141 +425,62 @@
         <a href="#">Terms of Service</a>
         <a href="#">Cookie Policy</a>
         <a href="#">GDPR Compliance</a>
-    </div>
+    </div>        
     <div class="col">
         <h4>Contact</h4>
-        <p>Head Office</p>
-        <p><a href="mailto:contact@placementsystem.com">contact@placementsystem.com</a></p>
-        <p>123456789</p>
+        <p><i class="fa fa-map-marker"></i> Head office</p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:contact@placementsystem.com">contact@placementsystem.com</a></p>
+        <p><i class="fa fa-phone"></i> 123456789</p>
+        <p><i class="fa fa-clock-o"></i> MON-SAT: 10AM - 11PM</p>
     </div>
     <div class="footer-bottom">
         <p>© 2025 P Company. All rights reserved.</p>
         <div class="footer-buttons">
-            <a href="#" class="btn sign-in">Sign In</a>
-            <a href="#" class="btn contact-us">Contact Us</a>
+            <a href="/sign.html" class="btn sign-in">Sign In</a>
+            <a href="/contact.html" class="btn contact-us">Contact Us</a>
         </div>
     </div>
 </footer>
 
-<!-- JS -->
-<script>
-
-     document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
-
-  if(localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = "🌙";
-  } else {
-    themeToggle.textContent = "🌞";
-  }
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-});
-
-
-
-const productContainer=document.getElementById('productContainer');
-
-function renderProducts(filter="all"){
-    productContainer.innerHTML='';
-    const filtered=filter==="all"?products:products.filter(p=>p.category===filter);
-    filtered.forEach(p=>{
-        const div=document.createElement('div');
-        div.className="product";
-        div.innerHTML=`
-        <a href="#">
-            <img src="${p.img}" alt="${p.name}">
-            <div class="des">
-                <h6>${p.name}</h6>
-                <div class="stars">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </div>
-                <div class="price-cart">
-                    <h4>₹${p.price}</h4>
-                    <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-            </div>
-        </a>`;
-        productContainer.appendChild(div);
-    });
-    attachCartEvents();
-}
-
-function getCart(){return JSON.parse(localStorage.getItem('cart'))||[];}
-function saveCart(cart){localStorage.setItem('cart',JSON.stringify(cart));}
-function updateCartCount(){const el=document.getElementById('cart-count');if(el) el.textContent=getCart().length;}
-function addToCart(id){let cart=getCart();if(!cart.includes(id)) cart.push(id);saveCart(cart);updateCartCount();alert("Product added!");}
-function attachCartEvents(){
-    document.querySelectorAll('.fa-shopping-cart').forEach(ic=>{
-        const cartLink=ic.closest('.ai');
-        if(cartLink){
-            cartLink.addEventListener('click',e=>{
-                e.preventDefault();e.stopPropagation();
-                const productDiv=cartLink.closest('.product');
-                const index=[...productDiv.parentElement.children].indexOf(productDiv);
-                addToCart(products[index].id);
-            });
-        }
-    });
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-    renderProducts();
-    const cartIcon=document.getElementById('lg-bag');
-    if(cartIcon){
-        const cartCount=document.createElement('span');
-        cartCount.id='cart-count';
-        cartCount.className='cart-count';
-        cartIcon.style.position='relative';
-        cartIcon.appendChild(cartCount);
-        updateCartCount();
-    }
-
-    document.querySelectorAll('.filter-btn').forEach(btn=>{
-        btn.addEventListener('click',()=>{
-            document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-            btn.classList.add('active');
-            renderProducts(btn.dataset.filter);
+   <script src="/js/source.js"></script>
+    <script>
+        // Update cart count when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
         });
-    });
-});
 
- // Select all filter buttons and products
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const products = document.querySelectorAll('.product');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove 'active' class from all buttons and add to the clicked one
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      products.forEach(product => {
-        // Show all products if 'all' is selected
-        if (filter === 'all') {
-          product.style.display = 'block';
-        } else {
-          // Show only products matching the filter, hide others
-          if (product.getAttribute('data-category') === filter) {
-            product.style.display = 'block';
-          } else {
-            product.style.display = 'none';
-          }
+        // Add cart count display to the header
+        const cartIcon = document.querySelector('#lg-bag');
+        if (cartIcon) {
+            const cartCount = document.createElement('span');
+            cartCount.id = 'cart-count';
+            cartCount.className = 'cart-count';
+            cartCount.style.cssText = 'position: absolute; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; top: -8px; right: -8px;';
+            cartIcon.style.position = 'relative';
+            cartIcon.appendChild(cartCount);
         }
-      });
-    });
-  });
-
-
-</script>
-
+        
+        // Add click handlers to all cart icons
+        document.querySelectorAll('.fa-shopping-cart').forEach(function(cartIcon) {
+            const cartLink = cartIcon.closest('.ai');
+            if (cartLink) {
+                cartLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Find the closest product container and get its ID
+                    const productContainer = this.closest('.product');
+                    const productLink = productContainer.querySelector('a[href^="singleproduct.html"]');
+                    if (productLink) {
+                        const productId = new URLSearchParams(productLink.href.split('?')[1]).get('product');
+                        if (productId) {
+                            addToCart(productId);
+                            return false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
