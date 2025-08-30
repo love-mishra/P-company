@@ -415,13 +415,16 @@ margin: 20px 35%;
     border: rgba(245, 245, 245, 0.208);
     transition: box-shadow 0.3s ease;
     cursor: pointer; /* Add cursor pointer on hover */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
 }
 
 .fe-box img {
     width: 100%;
-    height: 90%;
+    height: 70%;
     border-radius: 5px;
-    padding-bottom: 0;
     
 }
  
@@ -534,18 +537,20 @@ margin: 20px 35%;
 
 #product1 .product:hover{
     border-radius: 35px;
-    box-shadow: 5px 5px 5px 1px rgba(226, 210, 210, 0.475);
+    box-shadow: 5px 5px 5px 5px rgba(206, 195, 195, 0.475);
 }
 #product1 .product{
-    width: 23%;
-    /* min-width:230px; */
-    height: 5%;
+    width: 20rem;
+    min-height: max-content;
+    max-height: auto;
     font-size: 20px;
-
-    padding: 5px 10px;
+display:flex;
+flex-direction: column;
+text-align: center;
+justify-content: space-around;
+    padding:10px;
     border-radius: 30px;
-    /* border-radius: 50px solid rgba(255, 255, 255, 0.391); */
-
+  overflow:hidden;
     box-shadow: 3px 3px 3px 3px rgba(226, 210, 210, 0.475);
     margin: 25px 20px;
 }
@@ -558,12 +563,24 @@ margin: 20px 35%;
     width:100%;
 }
 #product1 .product a img{
-    width:100%;
+    width:90%;
+    box-sizing: content-box;
     padding: 0;
     border-radius: 20px;
 }
 #product1 .product  .des{
     text-align: start;
+    padding:5px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:5px;
+}
+#product1 .product  .des .price-cart{
+    display:flex;
+flex-direction: column;
+justify-content: space-between;
+/* gap:10px; */
 }
 #product1 .product  .des h6{
     font-size: 16px;
@@ -579,7 +596,7 @@ color: rgba(255, 217, 0, 0.858);
     font-weight: 600;
     font-size: 40px;
     color: #088178;
-    background-color: #e8f6ea;
+    /* background-color: #e8f6ea; */
     border-radius: 25px;
 }
 #product1 .product a .des h4{
@@ -3008,8 +3025,8 @@ body.dark .filter-btn.active {
   padding: 20px;
 }
 .products {
-  flex: 1;                /* take up the rest of the width */
-  display: grid;          /* product cards in grid */
+  flex: 1;             
+  display: grid;        
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
