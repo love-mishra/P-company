@@ -1330,26 +1330,24 @@ padding-bottom: 15px;
     font-size: 25px;
 }
 
-.signup-form button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    font-size: 28px;
-    cursor: pointer;
-}
 .btn{
     display: flex;
     justify-content: space-between;
 
 }
-#reset{
-    background-color: #df3535;
+.signup-form button {
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
 }
 .signup-form button:hover {
     background-color: rgba(110, 199, 22, 0.789);
-    color: #1a1a1a;
+   
 }
 #already_acc{
     display:flex;

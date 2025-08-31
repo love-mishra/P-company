@@ -24,8 +24,8 @@
             </div>
             
             <div class="btn">
-          <button type="button" id="submit-button">Submit</button>
-            <button type= "reset" class="btn" id="reset" >RESET</button>
+          <button type="button"class= id="submit-button"  >Submit</button><!--reset css for both buttons-->
+            <button type= "reset" class= id="reset" >Reset</button>
         </div>
         </form>
     </div>
@@ -66,7 +66,7 @@
 
     // Prevent the default form submission action
     if (signUpForm) {
-        signUpForm.addEventListener('submit', function(e) {
+        signUpForm.addEventListener('submit-button', function(e) {
             e.preventDefault();
         });
 
