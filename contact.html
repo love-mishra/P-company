@@ -1,153 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
 
-</head>
-<body>
 
-  <!-- Header -->
-  
-<header class="header">
-    <!-- Logo -->
-    <a href="/" class="logo">
-      <img src="/imag/ logo.jpg" alt="Brand Logo">
-    </a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 class="form-title">Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Project Type</option>
+                            <option value="website">Website Development</option>
+                            <option value="ecommerce">E-commerce Store</option>
+                            <option value="mobile">Mobile App</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
 
-    <!-- Category Dropdown -->
-    <details class="category-dropdown">
-      <summary>All</summary>
-      <div class="dropdown-content">
-        <p>Pants</p>
-        <p>Lower</p>
-        <p>Shirts</p>
-        <p>T-Shirts</p>
-        <p>Top</p>
-      </div>
-    </details>
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 class="info-title">Get in Touch</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>Visit Our Office</h4>
+                        <p>123 Business Street<br>Tech City, TC 12345</p>
+                    </div>
+                </div>
 
-    <!-- Search Bar -->
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search products...">
-      <button id="searchIcon" class="search-icon" onclick="performSearch()">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>Call Us</h4>
+                        <p>+1 (234) 567-8900<br>Mon-Fri 9AM-6PM</p>
+                    </div>
+                </div>
 
-    <!-- Navigation -->
-    <nav>
-      <ul class="navibar" id="navbar">
-        <li><a href="/index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
-        <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
-        <li><a href="/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
-        <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
-        <li id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
-        <li><i class="fa fa-times-circle" id="close"></i></li>
-      </ul>
-    </nav>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>Email Us</h4>
+                        <p>hello@pcompany.com<br>We respond within 24 hours</p>
+                    </div>
+                </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile">
-      <a href="cart.html"><i class="fa fa-shopping-basket"></i></a> 
-      <i id="bar" class="fa fa-outdent"></i>
-    </div>
-     <div class="dark-mode-toggle" id="themeToggle">🌞</div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="page-header" class="contact-header">
-    <div class="talk-container">
-      <p>Thanks for contacting us</p>
-      <h2 class="talk-title">LET'S TALK</h2>
-      <p class="talk-sub">We’re here to connect and help you</p>
-    </div>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="contact-section">
-    <div class="contact-card">
-      <h2>CONTACT US</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Mail" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">SUBMIT →</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Contact Details -->
-  <section id="contact-detail" class="section">
-    <div class="detail">
-      <span>Get in touch</span>
-      <h2>Visit one of our locations and contact us</h2>
-      <h3>Head Office</h3>
-      <ul class="contact-info">
-        <li><i class="fa fa-map"></i><p>Voluptas accusantium maxime asperiores assumen</p></li>
-        <li><i class="fa fa-envelope"></i><p>contact@some.com</p></li>
-        <li><i class="fa fa-phone"></i><p>Below is the number for calling</p></li>
-        <li><i class="fa fa-clock-o"></i><p>MON-SAT: 10AM - 11PM</p></li>
-      </ul>
-    </div>
-
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55361.61482197111!2d77.85362621094113!3d29.861363053908235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb36e08b35119%3A0x798f5dc25ebd0a72!2sRoorkee%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1693894030845!5m2!1sen!2sin"
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="col">
-        <img src="/imag/ logo.jpg" alt="logo" class="footer-logo">
-        <p>Crafted for a smooth shopping experience.<br>Designed to be fast, responsive, and user-friendly.</p>
-        <div class="follow">
-            <div class="icon">
-                <a href="#" class="fab fa-instagram"></a>  
-                <a href="#" class="fab fa-linkedin"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fas fa-envelope"></a>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9AM - 6PM<br>Weekend: By appointment</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <h4>Navigation</h4>
-        <a href="#">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="#">My Profile</a>
-    </div>
-    <div class="col">
-        <h4>Legal</h4>
-        <a href="Privacypolicy.html">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">GDPR Compliance</a>
-    </div>        
-    <div class="col">
-        <h4>Contact</h4>
-        <p><i class="fas fa-map-marker"></i> Head office</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@placementsystem.com">contact@placementsystem.com</a></p>
-        <p><i class="fas fa-phone"></i> 123456789</p>
-        <p><i class="fas fa-clock"></i> MON-SAT: 10AM - 11PM</p>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 P Company. All rights reserved.</p>
-        <div class="footer-buttons">
-            <a href="#" class="btn sign-in">Sign In</a>
-            <a href="contact.html" class="btn contact-us">Contact Us</a>
-        </div>
-    </div>
-</footer>
+    </section>
 
-  <!-- JS -->
-  <script src="/js/source.js"></script>
+    <script>
+        // Smooth scrolling for the CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
