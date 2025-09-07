@@ -16,8 +16,12 @@
 
 <!-- Header Section -->
 <header class="header">
-    <a href="#" class="logo"><img src="imag/logo.jpg" alt="Brand Logo"></a>
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <img src="./imag/ logo.jpg" alt="Brand Logo">
+    </a>
 
+    <!-- Category Dropdown -->
     <details class="category-dropdown">
         <summary>All</summary>
         <div class="dropdown-content">
@@ -27,15 +31,19 @@
         </div>
     </details>
 
+    <!-- Search Bar -->
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search products...">
-        <button id="searchIcon" class="search-icon"><i class="fa fa-search"></i></button>
+        <button id="searchIcon" class="search-icon" onclick="performSearch()">
+            <i class="fa fa-search"></i>
+        </button>
     </div>
 
+    <!-- Navigation -->
     <nav>
        <ul class="navibar" id="navbar">
-        <li><a href="index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+        <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="shop.html" class="active"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
         <li><a href="about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
         <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
         <li><a href="sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
@@ -44,10 +52,14 @@
       </ul>
     </nav>
 
+    <!-- Mobile Menu -->
     <div id="mobile">
-        <a href="#"><i class="fa fa-shopping-basket"></i></a>
+        <a href="cart.html"><i class="fa fa-shopping-basket"></i></a>
         <i id="bar" class="fa fa-outdent"></i>
     </div>
+    
+    <div class="dark-mode-toggle" id="themeToggle">🌞</div>
+</header>
 
     <div class="dark-mode-toggle" id="themeToggle">🌞</div>
 </header>
