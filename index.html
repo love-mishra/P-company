@@ -3,11 +3,619 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>HOME - Modern Collection</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>    
     <link rel="stylesheet" href="style/style.css">         
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
-     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
+    <style>
+        /* Modern Design Enhancements */
+        :root {
+            --primary-color: #088178;
+            --secondary-color: #06a085;
+            --accent-color: #5bf8fd;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --bg-gradient: linear-gradient(135deg, #088178 0%, #20b9bb 100%);
+            --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            --border-radius: 20px;
+        }
+
+        .modern-hero {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.08)" points="0,1000 1000,0 1000,1000"/></svg>');
+            z-index: 1;
+        }
+
+        .hero-content-modern {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-title-modern {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #5bf8fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle-modern {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .modern-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .features-modern {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--bg-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--bg-gradient);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .products-modern {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card-modern {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image-modern {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .product-image-modern img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card-modern:hover .product-image-modern img {
+            transform: scale(1.1);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(8, 129, 120, 0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-card-modern:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-info-modern {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .product-stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+            color: #f59e0b;
+        }
+
+        .cta-section {
+            padding: 5rem 2rem;
+            background: var(--bg-gradient);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-section {
+            padding: 5rem 2rem;
+            background: var(--text-dark);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Lightning Deals Section */
+        .lightning-deals-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+        }
+
+        .lightning-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .lightning-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .lightning-icon {
+            width: 48px;
+            height: 48px;
+            filter: hue-rotate(180deg) brightness(1.2);
+            animation: flash 2s infinite;
+        }
+
+        .lightning-title {
+            margin-bottom: 0;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .lightning-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lightning-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .deal-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: var(--card-shadow);
+            background-size: 120% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .deal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .deal-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .deal-card-1 {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)),
+                        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .deal-card-2 {
+            background: linear-gradient(135deg, #ff9a56, #ff6b95),
+                        url('https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .deal-card-3 {
+            background: linear-gradient(135deg, #4facfe, #00f2fe),
+                        url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .deal-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .deal-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .deal-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .deal-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .deal-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Banner Deals Section */
+        .banner-deals-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .banner-deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .banner-deal-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: var(--card-shadow);
+            background-size: 120% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .banner-deal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .banner-deal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .banner-seasonal {
+            background: linear-gradient(135deg, #667eea, #764ba2),
+                        url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .banner-footwear {
+            background: linear-gradient(135deg, #f093fb, #f5576c),
+                        url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .banner-tshirts {
+            background: linear-gradient(135deg, #4facfe, #00f2fe),
+                        url('https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-blend-mode: overlay;
+        }
+
+        .banner-deal-content {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .banner-deal-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-deal-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .banner-deal-btn {
+            background: white;
+            color: var(--text-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .banner-deal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title-modern {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle-modern {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
   <!-- Header -->
@@ -59,423 +667,325 @@
     <div class="dark-mode-toggle" id="themeToggle">🌞</div>
   </header>
 
-  <!-- Hero Banner -->
-<section id="buy" class="hero-banner">
-  <div class="hero-content">
-    <h1 class="hero-title">Super Deals</h1>
-    <p class="hero-subtitle">Buy and get <strong>70% OFF</strong> on each item</p>
-    <h2 class="hero-urgency">Hurry Up!</h2>
-    <a href="/shop.html" class="cta-btn">
-      <i class="fa fa-shopping-cart"></i> Shop Now
-    </a>
-  </div>
-</section>
-
-
-  <!-- Features Section -->
-  <section id="feature" class="features-section">
-    <div class="fe-box">
-      <img src="/imag/spin-the-wheel-6873663_1280.webp" alt="Free Spinning">
-      <h6>Free Spinning</h6>
-    </div>
-    <div class="fe-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDfRWAiAU5juAnY15omCQ4PYq7FPfmKAoiSA&s" alt="Online Order">
-      <h6>Online Order</h6>
-    </div>
-    <div class="fe-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe0xI66SgrLpP6__VaBMQXbdrc7UUdKEQEqg&s" alt="Save Money">
-      <h6>Save Money</h6>
-    </div>
-    <div class="fe-box">
-      <img src="data:image/jpeg;base64,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" alt="Happy Sell">
-      <h6>Happy Sell</h6>
-    </div>
-    <div class="fe-box">
-      <img src="data:image/png;base64,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" alt="24/7 Support">
-      <h6>24/7 Support</h6>
+  <!-- Modern Hero Section -->
+  <section class="modern-hero">
+    <div class="hero-content-modern">
+      <h1 class="hero-title-modern">Fashion Forward</h1>
+      <p class="hero-subtitle-modern">Discover the latest trends with up to <strong>70% OFF</strong> on premium collections</p>
+      <div class="cta-buttons">
+        <a href="/shop.html" class="modern-btn btn-primary">
+          <i class="fa fa-shopping-cart"></i> Shop Collection
+        </a>
+        <a href="/about.html" class="modern-btn btn-secondary">
+          <i class="fa fa-info-circle"></i> Learn More
+        </a>
+      </div>
     </div>
   </section>
 
-
-    <section id="product1" class="section"> 
-  <h2 class="features">FEATURE PRODUCT</h2>
-
-  <div class="product-container">
-
-    <!-- Product Card -->
-  <div class="product" onclick="window.location.href='/singleproduct.html?product=1';">
-  <a href="singleproduct.html?product=1">
-    <img src="https://image.hm.com/assets/hm/02/50/0250fe15a5aab2edc3ec9eb5229d5d199469fb6c.jpg?imwidth=1260" alt="Product 1">
-    <div class="des">
-      <h6>T-shirt</h6>
-      <div class="stars">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-      </div>
-      <div class="price">
-        <h4>₹299</h4>
-        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-      </div>
-    </div>
-  </a>
-</div>
-
-
-
-          <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=2">
-        <img src="https://image.hm.com/assets/hm/91/e5/91e5a17ff91cf66a0eabf131ee9e91fe8c41faa6.jpg?imwidth=1260" alt="Product 2">
-        <div class="des">
-            <h6>Full sleeve T-shirt</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price"> 
-                <h4>₹399</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </a>
-</div>
-
-
-           <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=3">
-        <img src="https://image.hm.com/assets/hm/df/63/df63a7b892f6a2dc1192033fb721f417c5eada70.jpg?imwidth=2160" alt="Product 3">
-        <div class="des">
-            <h6>Hoodies</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹599</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </a>
-</div>
-
-          <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=4">
-        <img src="https://image.hm.com/assets/hm/1d/61/1d6102d1be6a8ac3fdd86cb47ec7f4195a707172.jpg?imwidth=2160" alt="Product 4">
-        <div class="des">
-            <h6>Coat for Women</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹799</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </a>
-</div>
-
-<div class="product">
-    <a href="singleproduct.html?product=5">
-        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60" alt="Product 5">
-        <div class="des">
-            <h6>Black T-shirt</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            
-            <div class="price">
-                <h4>₹349</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </a>
-</div>
-
-
-           <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=6">
-        <img src="https://i.pinimg.com/736x/e0/9c/be/e09cbe67afa35fc6a70941422733a71e.jpg" alt="Product 6">
-        <div class="des">
-            <h6>Frock's for Girls</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹499</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </a>
-</div>
-</div>
-    </section>
-
-
-    <section id="banner" class="section"> 
-    <div class="banner-content">
-        <h4>Repair Services</h4>
-        <h2>Up to <span>70% OFF</span> all accessories</h2>
-        <a href="/shop.html"><button class="normal">Explore More</button></a> 
-    </div>
-</section>
-<section id="product1" class="section">
-  <h2>NEW ARRIVALS</h2>
-  <div class="product-container">
-    <div class="product" onclick="window.location.href='/singleproduct.html';">
-      <a href="singleproduct.html?product=7">
-        <img src=https://littleboxindia.com/cdn/shop/files/2eadf374d108bf9730fdda7f9f508a05_720x.webp?v=1749474865" alt="Product 7">
-        <div class="des">
-          <h6>Top's for Girls</h6>
-          <div>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+  <!-- Modern Features Section -->
+  <section class="features-modern">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa fa-gift"></i>
           </div>
-          <div class="price">
-            <h4>₹299</h4>
-            <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          <h3>Free Spinning Wheel</h3>
+          <p>Try your luck with our exciting spin wheel and win amazing discounts!</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa fa-laptop"></i>
+          </div>
+          <h3>Easy Online Ordering</h3>
+          <p>Seamless shopping experience with just a few clicks from anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa fa-piggy-bank"></i>
+          </div>
+          <h3>Save More Money</h3>
+          <p>Best prices guaranteed with exclusive deals and seasonal offers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa fa-headset"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock customer service to assist you with any queries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="products-modern">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products-grid">
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=1';">
+          <div class="product-image-modern">
+            <img src="https://image.hm.com/assets/hm/02/50/0250fe15a5aab2edc3ec9eb5229d5d199469fb6c.jpg?imwidth=1260" alt="Product 1">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Premium T-shirt</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <div class="product-price">₹299</div>
           </div>
         </div>
-      </a>
-    </div>
-  
 
-         <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=8">
-        <img src="https://littleboxindia.com/cdn/shop/files/V-Neck_Drawstring_Long_Sleeve_Top_In_Maroon_720x.webp?v=1742362493" alt="Product 8">
-        <div class="des">
-            <h6>Top's for Girls</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=2';">
+          <div class="product-image-modern">
+            <img src="https://image.hm.com/assets/hm/91/e5/91e5a17ff91cf66a0eabf131ee9e91fe8c41faa6.jpg?imwidth=1260" alt="Product 2">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
             </div>
-            <div class="price">
-                <h4>₹299</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Full Sleeve T-shirt</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
+            <div class="product-price">₹399</div>
+          </div>
         </div>
-    </a>
-</div>
 
-      <div class="product" onclick="window.location.href='/singleproduct.html?product=9';">
-    <a href="singleproduct.html?product=9">
-        <img src="https://image.hm.com/assets/hm/e5/26/e526329e011540a8cdf1ae8967e1a97980c0d644.jpg?imwidth=1260" alt="Product 9">
-        <div class="des">
-            <h6>Frock's</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=3';">
+          <div class="product-image-modern">
+            <img src="https://image.hm.com/assets/hm/df/63/df63a7b892f6a2dc1192033fb721f417c5eada70.jpg?imwidth=2160" alt="Product 3">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
             </div>
-            <div class="price">
-                <h4>₹999</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Cozy Hoodies</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
+            <div class="product-price">₹599</div>
+          </div>
         </div>
-    </a>
-</div>
 
-            <div class="product" onclick="window.location.href='/singleproduct.html?product=10';">
-    <a href="singleproduct.html?product=10">
-        <img src="https://image.hm.com/assets/hm/5d/0b/5d0be057093b80040b481b7c53f81ac303fff531.jpg?imwidth=1260" alt="Product 10">
-        <div class="des">
-            <h6>Frock's for Kids</h6>
-            <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=4';">
+          <div class="product-image-modern">
+            <img src="https://image.hm.com/assets/hm/1d/61/1d6102d1be6a8ac3fdd86cb47ec7f4195a707172.jpg?imwidth=2160" alt="Product 4">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
             </div>
-            <div class="price">
-                <h4>₹699</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Elegant Coat for Women</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
+            <div class="product-price">₹799</div>
+          </div>
         </div>
-    </a>
-</div>
 
-            <div class="product" onclick="window.location.href='/singleproduct.html?product=11';">
-    <a href="singleproduct.html?product=11">
-        <img src="https://image.hm.com/assets/hm/8c/3c/8c3c92adcb609167588f2395860ed9de14fe3452.jpg?imwidth=1260" alt="Product 11">
-        <div class="des">
-            <h6>Women's Top</h6>
-            <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=5';">
+          <div class="product-image-modern">
+            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60" alt="Product 5">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
             </div>
-            <div class="price">
-                <h4>₹449</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Classic Black T-shirt</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
+            <div class="product-price">₹349</div>
+          </div>
         </div>
-    </a>
-</div>
 
- <div class="product">
-  <a href="singleproduct.html?product=12">
-    <img src="https://image.hm.com/assets/hm/66/20/6620eadd1bfe0141b0455ebaa8810a89f28b9747.jpg?imwidth=1260" alt="Product 12">
-    <div class="des">
-      <h6>T-shirts</h6>
-      <div>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
+        <div class="product-card-modern" onclick="window.location.href='/singleproduct.html?product=6';">
+          <div class="product-image-modern">
+            <img src="https://i.pinimg.com/736x/e0/9c/be/e09cbe67afa35fc6a70941422733a71e.jpg" alt="Product 6">
+            <div class="product-overlay">
+              <a href="#" class="modern-btn btn-primary">
+                <i class="fa fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-info-modern">
+            <h3 class="product-name">Designer Frocks for Girls</h3>
+            <div class="product-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <div class="product-price">₹499</div>
+          </div>
+        </div>
       </div>
-      <div class="price">
-        <h4>₹249</h4>
-        <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Brands</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">99%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
       </div>
     </div>
-  </a>
-</div>
+  </section>
 
-            <div class="product">
-    <a href="singleproduct.html?product=13">
-        <img src="https://image.hm.com/assets/hm/8d/9b/8d9bc47f7d6d602d4f85747eeb56ea1de3ea0e9e.jpg?imwidth=1260" alt="Product 13">
-        <div class="des">
-            <h6>Cotton T-shirts</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹399</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
+  <!-- Lightning Deals Section -->
+  <section class="lightning-deals-section">
+    <div class="container">
+      <div class="lightning-header">
+        <div class="lightning-title-container">
+          <img src="./imag/icons8-lightning-48.png" alt="Lightning Icon" class="lightning-icon">
+          <h2 class="section-title lightning-title">Lightning Deals</h2>
+          <img src="./imag/icons8-lightning-48.png" alt="Lightning Icon" class="lightning-icon">
         </div>
-    </a>
-</div>
-<div class="product">
-    <a href="singleproduct.html?product=14">
-        <img src="https://image.hm.com/assets/hm/f5/58/f558d8ff9b8cb759d06e473d132cc811bab17939.jpg?imwidth=1260" alt="Product 14">
-        <div class="des">
-            <h6>Trousers</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹799</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
+        <p class="lightning-subtitle">Exclusive flash sales on clothing items. Limited time, limited quantities - don't miss out!</p>
+        <button class="lightning-btn">ENDS SOON - LIMITED STOCK</button>
+      </div>
+      
+      <div class="deals-grid">
+        <div class="deal-card deal-card-1">
+          <div class="deal-content">
+            <h4>Crazy Deal</h4>
+            <h2>Buy 1 and get 1 free</h2>
+            <a href="/learn.html" class="deal-btn">
+              <i class="fa fa-info-circle"></i> Learn More
+            </a>
+          </div>
         </div>
-    </a>
-</div>
-
-
-      <div class="product" onclick="window.location.href='/singleproduct.html';">
-    <a href="singleproduct.html?product=15">
-        <img src="https://image.hm.com/assets/hm/99/82/998240abf67f0ac2e822dec03bd67c54c22a0ea9.jpg?imwidth=1260" alt="Product 15">
-        <div class="des">
-            <h6>Cut T-shirts</h6>
-            <div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="price">
-                <h4>₹249</h4>
-                <a href="#" class="ai"><i class="fa fa-shopping-cart"></i></a>
-            </div>
+        
+        <div class="deal-card deal-card-2">
+          <div class="deal-content">
+            <h4>Spring/Summer</h4>
+            <h2>Up to 30% OFF</h2>
+            <a href="/shop.html" class="deal-btn">
+              <i class="fa fa-shopping-cart"></i> Check it Out
+            </a>
+          </div>
         </div>
-    </a>
-</div>
-
-   </div>
-   </section>
-
-<!--Lightning Deals Seaction starts here-->
- <section id="sm-banner" class="section">
-  <div class="top-container">
-    <div class="content">
-       <img src="./imag/icons8-lightning-48.png" alt="Lightning Icon">
-       <h1 id="main-heading">Lightning Deals</h1>
-       <img src="./imag/icons8-lightning-48.png" alt="Lightning Icon">
+        
+        <div class="deal-card deal-card-3">
+          <div class="deal-content">
+            <h4>Winter Collections</h4>
+            <h2>Upcoming Season</h2>
+            <a href="/shop.html" class="deal-btn">
+              <i class="fa fa-snowflake"></i> Collection
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>Exclusive flash sales on clothing items. Limited time, limited quantities - don't miss out!</p>
-    <button id="btn-limited">ENDS SOON - LIMITED STOCK</button>
-  </div>
-  <div class="ban-content">
-    <div class="banner-box">
-      <h4>Crazy deal</h4>
-      <h2>Buy 1 and get 1 free</h2>
-      <a href="/learn.html"><button class="fancy-btn">Learn More</button></a>
-    </div>
-    <div class="banner-box">
-      <h4>Spring/Summer</h4>
-      <h2>Upto 10% OFF</h2>
-      <a href="/shop.html"><button class="fancy-btn">Check it Out</button></a>
-    </div>
-    <div class="banner-box">
-      <h4>Winter Collections</h4>
-      <h2>Upcoming season</h2>
-      <a href="/shop.html"><button class="fancy-btn">Collection</button></a>
-    </div>
-  </div>
-  
-</section>
-<!--Lightning Deals Seaction Ends here-->
+  </section>
 
-<section id="banner-3" class="section">
-  <div class="banner-box">
-    <h2>SEASONAL SALE</h2>
-    <h3>WINTER COLLECTION -50% off</h3>
-    <a href="/sale.html"><button class="fancy-btn">Shop Now</button></a>
-  </div>
-  <div class="banner-box">
-    <h2>NEW FOOTWEAR COLLECTION</h2>
-    <h3>Spring / Summer 2023</h3>
-    <a href="/footwear.html"><button class="fancy-btn">Explore</button></a>
-  </div>
-  <div class="banner-box">
-    <h2>T-SHIRTS</h2>
-    <h3>New trendy prints</h3>
-    <a href="/tshirts.html"><button class="fancy-btn">See More</button></a>
-  </div>
-</section>
+  <!-- Additional Banners Section -->
+  <section class="banner-deals-section">
+    <div class="container">
+      <div class="banner-deals-grid">
+        <div class="banner-deal-card banner-seasonal">
+          <div class="banner-deal-content">
+            <h2>SEASONAL SALE</h2>
+            <h3>WINTER COLLECTION -50% off</h3>
+            <a href="/sale.html" class="banner-deal-btn">
+              <i class="fa fa-tag"></i> Shop Now
+            </a>
+          </div>
+        </div>
+        
+        <div class="banner-deal-card banner-footwear">
+          <div class="banner-deal-content">
+            <h2>NEW FOOTWEAR COLLECTION</h2>
+            <h3>Spring / Summer 2025</h3>
+            <a href="/footwear.html" class="banner-deal-btn">
+              <i class="fa fa-shoe-prints"></i> Explore
+            </a>
+          </div>
+        </div>
+        
+        <div class="banner-deal-card banner-tshirts">
+          <div class="banner-deal-content">
+            <h2>T-SHIRTS</h2>
+            <h3>New trendy prints</h3>
+            <a href="/tshirts.html" class="banner-deal-btn">
+              <i class="fa fa-tshirt"></i> See More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready to Start Shopping?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Join thousands of satisfied customers and discover your perfect style today.</p>
+      <div class="cta-buttons">
+        <a href="/shop.html" class="modern-btn btn-secondary">
+          <i class="fa fa-shopping-cart"></i> Explore Collection
+        </a>
+        <a href="/contact.html" class="modern-btn btn-primary">
+          <i class="fa fa-envelope"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Same as original) -->
+  <footer>
     <div class="col">
         <img src="/imag/ logo.jpg" alt="logo" class="footer-logo">
         <p>Crafted for a smooth shopping experience.<br>Designed to be fast, responsive, and user-friendly.</p>
@@ -515,31 +1025,58 @@
             <a href="contact.html" class="btn contact-us">Contact Us</a>
         </div>
     </div>
-</footer>
+  </footer>
 
-   <script src="/js/source.js">
-    
+  <script src="/js/source.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('themeToggle');
 
-   </script>
-   <script>
+      if(localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.textContent = "🌙";
+      } else {
+        themeToggle.textContent = "🌞";
+      }
 
-     document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    });
 
-  if(localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = "🌙";
-  } else {
-    themeToggle.textContent = "🌞";
-  }
+    // Add smooth scrolling for better UX
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    themeToggle.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "🌞";
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-});
+    // Add loading animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-</script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-card, .product-card-modern, .stat-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
