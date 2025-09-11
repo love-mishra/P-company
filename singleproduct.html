@@ -68,9 +68,34 @@
                 const product = products[productId];
                 
                 if (product) {
+                    // Update product image
+                    const imageElement = document.getElementById('product-image');
+                    if (imageElement) {
+                        imageElement.src = product.image;
+                        imageElement.alt = product.title;
+                    }
+                    
+                    // Update product title
+                    const titleElement = document.getElementById('product-title');
+                    if (titleElement) {
+                        titleElement.textContent = product.title;
+                    }
+                    
+                    // Update product price
                     const priceElement = document.getElementById('product-price');
                     if (priceElement) {
                         priceElement.textContent = '₹' + product.price;
+                    }
+                } else {
+                    // If product not found, show error message
+                    const titleElement = document.getElementById('product-title');
+                    if (titleElement) {
+                        titleElement.textContent = 'Product Not Found';
+                    }
+                    
+                    const priceElement = document.getElementById('product-price');
+                    if (priceElement) {
+                        priceElement.textContent = '₹0';
                     }
                 }
                 updateCartCount();

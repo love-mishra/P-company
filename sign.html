@@ -1,35 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet"   href="/style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - P Company</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-     <div id="signbg">
-    <div class="signup-form">
-        <a href="/index.html"><span>Go back your home</span></a>
-        <h2>Sign Up</h2>
-        <form id="signup-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <div id="already_acc">
-                <p>Already Have an Account?</p>
-                <a href="signin.html">Sign in</a>
+    <div id="signbg">
+        <div class="signup-form">
+            <div class="form-header">
+                <a href="/index.html" class="back-link">
+                    <i class="fa fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <div class="logo-section">
+                    <img src="./imag/logo.jpg" alt="P Company Logo" class="signup-logo">
+                </div>
             </div>
             
-            <div class="btn">
-          <button type="button"class= id="submit-button"  >Submit</button><!--reset css for both buttons-->
-            <button type= "reset" class= id="reset" >Reset</button>
+            <h2>Create Your Account</h2>
+            <p class="signup-subtitle">Join P Company and discover amazing products</p>
+            
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="username"><i class="fa fa-user"></i> Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password"><i class="fa fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="submit-button" class="btn-primary">
+                        <i class="fa fa-user-plus"></i> Create Account
+                    </button>
+                    <button type="reset" id="reset" class="btn-secondary">
+                        <i class="fa fa-refresh"></i> Reset Form
+                    </button>
+                </div>
+                
+                <div class="signin-link">
+                    <p>Already have an account? <a href="signin.html">Sign In <i class="fa fa-arrow-right"></i></a></p>
+                </div>
+            </form>
         </div>
-        </form>
     </div>
-</div>
 
 
     <script   >
