@@ -4743,3 +4743,28 @@ input[type="range"] {
     grid-template-columns: 1fr;
   }
 }
+.product{
+  transition: transform 0.3s ease-in-out;
+}
+.product:hover{
+  transform: scale(1.05);
+}
+.product img{
+   transition: transform 0.3s ease-in-out; 
+}
+.product img:hover{
+    transform: scale(1.009);
+    box-shadow: 0 0 3px grey;
+}
+@keyframes tilt {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(15deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.product:hover .fa{
+  animation: tilt 0.5s infinite;
+}
+
