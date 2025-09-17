@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy - P Company</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00dfc4;
+    }
+
+    /* Cookie Section  */
+    .cookie-container {
+      max-width: 950px;
+      margin: 120px auto 50px;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .cookie-container h1 {
+      font-size: 2.2rem;
+      color: #111827;
+      border-bottom: 3px solid #00dfc4;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .cookie-block {
+      margin-bottom: 30px;
+      padding: 15px 20px;
+      border-left: 4px solid #00dfc4;
+      background: #f9fafc;
+      border-radius: 8px;
+    }
+
+    .cookie-block h2 {
+      font-size: 1.4rem;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .cookie-block ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .cookie-block ul li {
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      font-size: 1rem;
+      color: #555;
+    }
+
+ 
+    .cookie-block ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #00dfc4;
+      font-weight: bold;
+    }
+
+    .cookie-container a {
+      color: #00dfc4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cookie-container a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #ccc;
+      padding: 40px 20px;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .footer-container h3 {
+      color: #00dfc4;
+      margin-bottom: 15px;
+    }
+    .footer-container p, .footer-container a {
+      font-size: 0.95rem;
+      color: #ccc;
+      text-decoration: none;
+    }
+    .footer-container a:hover {
+      color: white;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .social-icons a:hover {
+      color: #00dfc4;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="\imag\ logo.jpg" alt="Brand Logo">
+    </a>
+
+    <!-- Category Dropdown -->
+    <details class="category-dropdown">
+      <summary>All</summary>
+      <div class="dropdown-content">
+        <p>Pants</p>
+        <p>Lower</p>
+        <p>Shirts</p>
+        <p>T-Shirts</p>
+        <p>Top</p>
+      </div>
+    </details>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button id="searchIcon" class="search-icon" onclick="performSearch()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="navibar" id="navbar">
+        <li><a href="/index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+        <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign In / Login</span></a></li>
+        <li id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
+        <li><i class="fa fa-times-circle" id="close"></i></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile">
+      <a href="cart.html"><i class="fa fa-shopping-basket"></i></a>
+      <i id="bar" class="fa fa-outdent"></i>
+    </div>
+  </header>
+
+  <!-- Cookie Policy -->
+  <section class="cookie-container">
+    <h1>Cookie Policy</h1>
+    <p>
+      This Cookie Policy explains how <strong>P Company</strong> uses cookies and similar technologies
+      to recognize you when you visit our website, remember your preferences, and improve your experience.
+    </p>
+
+    <div class="cookie-block">
+      <h2>🍪 What Are Cookies?</h2>
+      <ul>
+        <li>Small text files placed on your device by your browser when you visit a website.</li>
+        <li>They help websites function, provide security, remember preferences, and measure performance.</li>
+      </ul>
+    </div>
+
+    <div class="cookie-block">
+      <h2>⚙️ Types of Cookies We Use</h2>
+      <ul>
+        <li><strong>Essential cookies:</strong> required for core features like sign in and cart.</li>
+        <li><strong>Preference cookies:</strong> remember choices such as language and filters.</li>
+        <li><strong>Analytics cookies:</strong> help us understand traffic and improve the site.</li>
+        <li><strong>Marketing cookies:</strong> only used if you opt-in to personalized offers.</li>
+      </ul>
+    </div>
+
+    <div class="cookie-block">
+      <h2>🛠 How We Use Cookies</h2>
+      <ul>
+        <li>Keep items in your cart and maintain your session.</li>
+        <li>Save your preferences for a smoother experience.</li>
+        <li>Measure page performance and fix issues.</li>
+      </ul>
+    </div>
+
+    <div class="cookie-block">
+      <h2>🔒 Managing Cookies</h2>
+      <ul>
+        <li>You can accept, reject, or delete cookies via your browser settings.</li>
+        <li>Disabling some cookies may impact site features such as checkout or login.</li>
+      </ul>
+    </div>
+
+    <div class="cookie-block">
+      <h2>📧 Contact</h2>
+      <p>
+        Questions about this policy? Reach us at
+        <a href="mailto:contact@pcompany.com">contact@pcompany.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="col">
+        <img src="/imag/ logo.jpg" alt="logo" class="footer-logo">
+        <p>Crafted for a smooth shopping experience.<br>Designed to be fast, responsive, and user-friendly.</p>
+        <div class="follow">
+            <div class="icon">
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fas fa-envelope"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+    <div class="footer-bottom">
+        <p>© 2025 P Company. All rights reserved.</p>
+        <div class="footer-buttons">
+            <a href="sign.html" class="btn sign-in">Sign In</a>
+            <a href="contact.html" class="btn contact-us">Contact Us</a>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
