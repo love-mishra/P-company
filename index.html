@@ -40,12 +40,12 @@
     <!-- Navigation -->
     <nav>
       <ul class="navibar" id="navbar">
-        <li><a href="/index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="/shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
-        <li><a href="/about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
-        <li><a href="./contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
-        <li><a href="/sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
-        <li id="lg-bag"><a href="/cart.html"><i class="fa fa-shopping-basket"></i></a></li>
+        <li><a href="index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="shop.html"><i class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+        <li><a href="about.html"><i class="fa fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="sign.html"><i class="fa fa-user"></i><span>Sign</span></a></li>
+        <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-basket"></i></a></li>
         <li><i class="fa fa-times-circle" id="close"></i></li>
       </ul>
     </nav>
@@ -70,6 +70,14 @@
     </a>
   </div>
 </section>
+
+<!-- scroll button-->
+
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+  <i class="fa fa-arrow-up"></i>
+</button>
+
 
 
   <!-- Features Section -->
@@ -539,6 +547,25 @@
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   });
 });
+
+
+  // Get the button
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Show the button when user scrolls down 300px
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when button clicked
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 
 </script>
 </body>
